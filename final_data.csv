@@ -1,0 +1,662 @@
+Country,Age,Gender,Outcome,Species,Medical History,Steroid and Antifungal 
+Greece,70,Male,Dead,A. niger and C. albicans,Diabetes Mellitus and Hypertension,Dexamethasone and Voriconazole
+Iran,11,Female,Dead,A. quadrilineatus,Without Medical History,Without Steroids and AmBisome and Caspofungin
+USA,61,Male,Live,A. fumigatus,Without Medical History,Dexamethasone and Voriconazole
+USA,54,Male,Dead,A. fumigatus,Without Medical History,Dexamethasone and AmBisome
+USA,54,Male,Dead,A. fumigatus,Diabetes Mellitus and Hypertension,Dexamethasone and Voriconazole
+Italy,73,Male,Dead,A. niger,Without Medical History,Dexamethasone and Voriconazole
+Spain,75,Male,Dead,A. fumigatus,Diabetes Mellitus and Hypertension and COPD,Methylprednisolone and Without antifungal agents and Antifungal agents
+Spain,42,Male,Dead,A. fumigatus,COPD and Obesity,Methylprednisolone then Prednisolone and Itraconazole
+Spain,60,Female,Dead,A. niger,Obesity,Without Steroids and Without Antifungal agents
+Spain,58,Female,Live,A. flavus,Hypertension,Methylprednisolone then Prednisolone and Itraconazole
+Spain,70,Male,Dead,A. fumigatus,Diabetes Mellitus and Hypertension,Methylprednisolone then Prednisolone and Itraconazole
+Spain,55,Male,Live,A. niger,Diabetes Mellitus and Hypertension,Methylprednisolone and Amphotericin B
+Spain,57,Male,Dead,A. flavus,Without Medical History,Methylprednisolone and Itraconazole
+Iran,63,Male,Dead,A. fumigatus,Without Medical History,Methylprednisolone and Amphotericin B and Voriconazole
+India,70,Male,Live,A. nidulan,Diabetes Mellitus and Hypertension,Dexamethasone and Voriconazole
+India,66,Male,Live,A. fumigatus,Without Medical History,Dexamethasone and Voriconazole
+India,67,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension,Dexamethasone and Voriconazole
+India,42,Male,Live,A. fumigatus,Without Medical History,Dexamethasone and Voriconazole
+Japan,55,Male,Live,Aspergillius spp.,Diabetes Mellitus and Hypertension,Dexamethasone and Voriconazole and AmBisome
+Japan,72,Male,Dead,A. fumigatus,Hypertension and COPD,Dexamethasone and Micafungin and Voriconazole
+Iran,35,Male,Dead,A. ochraceus,Immunocompetent,Methylprednisolone and AmBisome
+Lebanon,70,Male,Dead,A. fumigatus,Without Medical History,Without Steroids and Fluconazole and Amphotericin B and Voriconazole
+India,33,Female,Live,A. fumigatus,Diabetes Mellitus ,Dexamethasone and Voriconazole
+Argentina,85,Male,Dead,A. flavus and Candida lusitaniae,Hypertension,Corticosteroids and Anidulafungin and Voriconazole
+Iran,31,Female,Live,A. flavus and R. oryzae,Without Medical History,Methylprednisolone then Dexamethasone and AmBisome and Posaconazole
+Iran,58,Male,Live,A. fumigatus and R. oryzae,Diabetes Mellitus and Hypertension,Dexamethasone and AmBisome and Posaconazole
+Pakistan,81,Male,Live,A. flavus,Diabetes Mellitus ,Steroid and Amphotericin B
+Pakistan,57,Male,Live,A. fumigatus and A. flavus,Diabetes Mellitus and Hypertension,Steroid and Amphotericin B
+Pakistan,71,Male,Live,A. flavus,Diabetes Mellitus and Hypertension,Steroid and Voriconazole
+Pakistan,85,Female,Dead,A. niger,Diabetes Mellitus and Hypertension,Steroid and Voriconazole
+Pakistan,51,Female,Live,A. flavus,Diabetes Mellitus and Hypertension,Steroid and Voriconazole
+Kuwait,40,Male,Dead,A. niger,Without Medical History,Methylprednisolone and Voriconazole
+Kuwait,60,Male,Dead,A. niger,Diabetes Mellitus and Hypertension and Ischemic Heart Disease,Hydrocortisone and AmBisome
+India,65,Male,Live,A. flavus,Hypertension,Dexamethasone and Moxifloxacin and Voriconazole
+Spain,71,Male,Live,A. fumigatus,Hypertension,Methylprednisolone and Isavuconazole
+Spain,73,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension and Hyperlipidemia,Without Steroids and Isavuconazole
+Spain,67,Female,Dead,A. fumigatus,Hyperlipidemia,Methylprednisolone then Prednisolone and AmBisome and Isavuconazole
+Iran,50,Female,Live,A. flavus and A. niger,Diabetes Mellitus ,Dexamethasone and AmBisome and Voriconazole
+France,56,Male,Dead,A. fumigatus,Diabetes Mellitus and Hypertension and Hyperlipidemia and Obesity,Without Steroids and Without Antifungal agents
+France,86,Male,Live,A. fumigatus,Heart Related Diseases,Without Steroids and Without Antifungal agents
+France,79,Female,Dead,A. fumigatus,Hypertension and COPD and Cancer,Without Steroids and Without Antifungal agents
+France,78,Male,Dead,A. fumigatus,Diabetes Mellitus and Hypertension and COPD and Cancer,Without Steroids and Without Antifungal agents
+France,77,Male,Dead,A. fumigatus,COPD and Asthma and Heart Related Diseases,Without Steroids and Without Antifungal agents
+France,76,Male,Live,A. fumigatus,Without Medical History,Without Steroids and Voriconazole
+France,73,Male,Live,A. fumigatus,Without Medical History,Without Steroids and Voriconazole
+France,72,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension,Without Steroids and Voriconazole
+France,70,Male,Dead,A. fumigatus,Diabetes Mellitus and Asthma,Without Steroids and Voriconazole
+France,69,Male,Live,A. fumigatus,Hypertension,Without Steroids and Without Antifungal agents
+France,68,Male,Live,A. fumigatus,COPD and Asthma,Without Steroids and Voriconazole
+France,63,Male,Dead,A. fumigatus,Follicular lymphoma in remission,Without Steroids and Without Antifungal agents
+France,62,Male,Dead,A. calidoustus,Tuberculosis in the infancy,Without Steroids and Without Antifungal agents
+France,62,Male,Live,A. fumigatus,Renal insufficiency,Without Steroids and Voriconazole
+France,58,Female,Live,A. niger,Diabetes Mellitus and Hypertension and HIV,Without Steroids and Without Antifungal agents
+France,51,Male,Dead,A. fumigatus,Diabetes Mellitus and Obesity and Asthma,Without Steroids and Voriconazole
+France,44,Male,Live,A. fumigatus,Chronic B hepatitis,Without Steroids and Voriconazole
+USA,64,Male,Live,A. niger,Hypertension,Dexamethasone and Itraconazole
+Netherlands,67,Male,Live,A. fumigatus and R. microsporus,Diabetes Mellitus and Cancer,Dexamethasone and Without antifungal agents and Antifungal agents
+UK,58,Male,Dead,Aspergillius spp.,thrombocythaemia,Without Steroids and Voriconazole
+China,72,Female,Live,A. fumigatus,Rheumatoid Arthritis,Methylprednisolone and Caspofungin
+Japan,79,Male,Dead,A. fumigatus,Diabetes Mellitus and Polymyalgia rheumatica,Prednisolone then Dexamethasone and Dexamethasone and AmBisome
+Korea,69,Male,Dead,A. fumigatus,Without Medical History,Dexamethasone and Voriconazole and AmBisome
+Denmark,67,Female,Live,A. fumigatus,Without Medical History,Dexamethasone and Voriconazole and ltracoazole
+India,57,Male,Live,A. fumigatus,Without Medical History,Dexamethasone and Voriconazole
+Netherlands,74,Female,Dead,A. fumigatus,Polyarthrosis and Acute renal failure,Hydrocortisone and Voriconazole and Amphotericin B
+Argentina,19,Male,Dead,A. fumigatus,Idiopathic thrombocytopenic and Multiple supra- and infratentorial hyperintense lesions ,Without Steroids and AmBisome
+Japan,49,Male,Live,Aspergillius spp.,Diabetes Mellitus and Hypertension and Obesity,Methylprednisolone and Itraconazole
+Japan,62,Male,Live,Aspergillius spp.,Meniere's disease,Without Steroids and Itraconazole
+Iran,68,Male,Live,Aspergillus spp. and Mucomycosis,Diabetes Mellitus ,Dexamethasone and AmBisome and Ganciclovir and Posaconazole
+Brazil,71,Male,Dead,A. penicillioides,Diabetes Mellitus and Hypertension and Kidney Related Diseases,Without Steroids and Without Antifungal agents
+Iran,30,Male,Live,A. fumigatus,Without Medical History,Dexamethasone and Voriconazole
+Italy,55,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension and Obesity and Asthma and Ischemic Heart Disease,Corticosteroids and Isavuconazole
+USA,60,Male,Live,A. fumigatus,Without Medical History,Dexamethasone and Fluconazole and Valacyclovir and Ceftriaxone and Voriconazole
+USA,69,Male,Live,A. fumigatus,Without Medical History,Dexamethasone and Voriconazole
+Japan,29,Female,Live,A. fumigatus,Cancer and HSCT,Prednisolone and Caspofungin and Capsofungin and AmBisome
+Brazil,66,Male,Live,A. fumigatus,Hypertension and COPD and Kidney Related Diseases,Without Steroids and Itraconazole
+Brazil,59,Female,Dead,A. flavus and R. oryzae,Diabetes Mellitus and Hypertension and Obesity and Solid Organ Transplant and Cancer and Kidney Related Diseases,Without Steroids and Voriconazole
+Brazil,79,Male,Dead,A. flavus and A. oryzae and C. albicans,Diabetes Mellitus and COPD and Ischemic Heart Disease and Kidney Related Diseases,Without Steroids and Without Antifungal agents
+Brazil,53,Female,Live,A. niger,Hypertension and Hyperlipidemia,Methylprednisolone and Without antifungal agents and Antifungal agents
+Brazil,56,Male,Dead,A. fumigatus and C. ablicans,Diabetes Mellitus and Hyperlipidemia,Without Steroids and Micafungin and AmBisome and ltraconazole
+Brazil,78,Male,Dead,A. tamari and C. albicans,Diabetes Mellitus and Kidney Related Diseases and Chronic arterial disease and Hypothyroidism,Without Steroids and Voriconazole
+Brazil,68,Male,Dead,A. terrei,Diabetes Mellitus and Chest Related Diseases and Kidney Related Diseases and Coronary disease,Without Steroids and Voriconazole and Posaconazole
+Brazil,26,Male,Live,A. fumigatus,Obesity and Tuberculosis,Without Steroids and AmBisome and Voriconazole
+Brazil,49,Male,Dead,A. flavus and R. oryzae,Diabetes Mellitus and Kidney Related Diseases and Peripheral venous insufficiency,Without Steroids and Voriconazole
+Brazil,65,Male,Dead,A. tamari and C. albicans,Diabetes Mellitus and Kidney Related Diseases and HIV,Without Steroids and Micafungin
+Brazil,79,Male,Dead,A. flavus and A. oryzae and C. albicans,Diabetes Mellitus and Hypertension and COPD and Heart Related Diseases and Kidney Related Diseases,Without Steroids and Voriconazole and Posaconazole
+Brazil,60,Male,Dead,A. fumigatus,Diabetes Mellitus and Systemic sclerosis,Without Steroids and Without Antifungal agents
+Brazil,58,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension and Kidney Related Diseases,Without Steroids and Without Antifungal agents
+Brazil,33,Male,Dead,A. flavus and A. oryzae and C. albicans,Diabetes Mellitus and Obesity,Without Steroids and Without Antifungal agents
+Brazil,77,Female,Dead,A. fumigatus,Diabetes Mellitus and Hypertension and Ischemic Heart Disease,Without Steroids and Without Antifungal agents
+Italy,67,Male,Live,A. flavus,Diabetes Mellitus and Hypertension,Dexamethasone and Voriconazole
+Japan,62,Male,Dead,A. niger,Septic shock and Acute renal failure,Dexamethasone and Voriconazole
+Argentina,73,Male,Live,A. fumigatus,pulmonary embolism and thrombophlebitis,Methylprednisolone and Fluconazole and Amphotericin B and Voriconazole
+Iran,69,Male,Live,A. fumigatus and A. flavus,Diabetes Mellitus and Ischemic Heart Disease and Cancer,Methylprednisolone then Dexamethasone and Amphotericin B and Voriconazole
+New York City,82,Male,Dead,Aspergillius spp.,septic shock,Glucocorticoids and Voriconazole
+New York City,79,Male,Dead,A. fumigatus,Hypertension and Ischemic Heart Disease and Cancer and Coronary artery disease,Without Steroids and Voriconazole
+New York City,77,Male,Dead,Aspergillius spp.,Without Medical History,Without Steroids and Voriconazole
+New York City,77,Male,Dead,Aspergillius spp.,Diabetes Mellitus ,Without Steroids and Caspofungin
+USA,59,Male,Dead,A. fumigatus and Cryptococcus neoformans,Diabetes Mellitus and COPD and Obesity and Heart Related Diseases,Methylprednisolone and Voriconazole and AmBisome
+Netherlands,79,Male,Dead,A. fumigatus,Diabetes Mellitus and Hypertension and Heart Related Diseases and Kidney Related Diseases,Hydrocortisone and Anidulafungin and Voriconazole
+Ireland,66,Male,Dead,A. fumigatus and C. ablicans,Diabetes Mellitus and Hypertension and Hyperlipidemia and Obesity,Without Steroids and AmBisome
+France,55,Male,Dead,A. fumigatus and R. microsporus,Ollicular lymphoma and auto-HCT and Influenza B virus ,Without Steroids and AmBisome
+Germany,62,Female,Dead,A. fumigatus,COPD,Steroid and Voriconazole
+Germany,70,Male,Dead,A. fumigatus,Without Medical History,Without Steroids and Caspofungin and Voriconazole
+Germany,54,Male,Live,A. fumigatus,Diabetes Mellitus ,Corticosteroids and Caspofungin and Voriconazole
+Germany,73,Male,Dead,A. fumigatus,COPD,Corticosteroids and Voriconazole
+Germany,80,Male,Dead,A. fumigatus,Pulmonary fibrosis,Without Steroids and AmBisome
+Germany,70,Male,Dead,A. fumigatus,Without Medical History,Without Steroids and AmBisome
+France,74,Male,Dead,A. fumigatus,Myelodysplastic syndrome,Without Steroids and Without Antifungal agents
+France,59,Female,Live,A. fumigatus,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+France,69,Female,Live,A. fumigatus,Without Medical History,Dexamethasone and Without antifungal agents and Antifungal agents
+France,43,Male,Live,A. fumigatus,Asthma,Corticosteroids and Without antifungal agents and Antifungal agents
+France,79,Male,Live,A. fumigatus,Diabetes Mellitus ,Dexamethasone and Without antifungal agents and Antifungal agents
+France,77,Male,Dead,A. fumigatus,Asthma,Dexamethasone and Voriconazole
+France,75,Female,Dead,A. fumigatus,Diabetes Mellitus ,Dexamethasone and Caspofungin
+France,47,Male,Dead,A. fumigatus,Cancer,Corticosteroids and Without antifungal agents and Antifungal agents
+Austria,70,Male,Dead,A. fumigatus,Diabetes Mellitus and COPD,Without Steroids and Voriconazole
+Belgium,86,Male,Dead,A. flavus,Without Medical History,Without Steroids and Without Antifungal agents
+Belgium,38,Male,Live,A. fumigatus,Without Medical History,Without Steroids and Voriconazole and Itraconazole
+Belgium,62,Male,Dead,A. fumigatus,Diabetes Mellitus ,Without Steroids and Voriconazole
+Belgium,73,Male,Live,A. fumigatus,Diabetes Mellitus ,Without Steroids and Voriconazole
+Belgium,77,Male,Live,A. fumigatus,Diabetes Mellitus ,Corticosteroids and Voriconazole
+Belgium,75,Male,Dead,A. fumigatus,COPD,Without Steroids and Voriconazole
+Netherlands,83,Male,Dead,A. fumigatus,COPD,Prednisolone and Voriconazole and Anidulafungin and AmBisome
+Netherlands,67,Male,Dead,A. fumigatus,COPD,Prednisolone and Voriconazole and Anidulafungin and AmBisome
+Netherlands,75,Male,Dead,A. fumigatus,COPD,Without Steroids and Voriconazole and Anidulafungin and AmBisome
+Netherlands,43,Male,Live,A. fumigatus,Without Medical History,Without Steroids and Voriconazole and Anidulafungin and AmBisome
+Netherlands,57,Male,Dead,A. fumigatus,Asthma,Without Steroids and Voriconazole and Anidulafungin and AmBisome
+Netherlands,58,Male,Live,A. fumigatus,Without Medical History,Without Steroids and Voriconazole and Anidulafungin
+France,80,Male,Dead,A. flavus,Without Medical History,Without Steroids and Voriconazole and Isavuconazole
+Italy,73,Male,Dead,A. fumigatus,Diabetes Mellitus ,Without Steroids and AmBisome
+India,40,Male,Live,A. fumigatus,Without Medical History,Methylprednisolone then Prednisolone and Fluconazole and Voriconazole and AmBisome
+Slovakia,64,Male,Dead,A. fumigatus,Asthma,Dexamethasone and Fluconazole
+Spain,72,Male,Dead,A. fumigatus,COPD and Myelodysplastic syndrome and HIV,Corticosteroids and Voriconazole
+Spain,67,Male,Dead,A. fumigatus,Diabetes Mellitus and COPD and Obesity,Corticosteroids and Without antifungal agents and Antifungal agents
+Spain,70,Male,Dead,A. fumigatus,Without Medical History,Corticosteroids and Amphotericin B
+Spain,51,Male,Dead,A. fumigatus,Diabetes Mellitus and Ankylosing spondylitis HLA B27,Corticosteroids and Amphotericin B and Isavuconazole
+Spain,56,Male,Live,A. fumigatus,Acquired haemophilia A,Corticosteroids and Micafungin and Voriconazole and Itraconazole and Amphotericin B
+Spain,69,Female,Dead,A. nidulan,Diabetes Mellitus ,Corticosteroids and Amphotericin B and Voriconazole
+Spain,76,Female,Dead,A. fumigatus,Hypothyroidism,Corticosteroids and Without antifungal agents and Antifungal agents
+Spain,73,Male,Live,A. fumigatus,Diabetes Mellitus ,Corticosteroids and Anidulafungin and Amphotericin B
+Spain,71,Male,Dead,A. fumigatus,COPD and Ischemic Heart Disease and Cancer,Corticosteroids and Voriconazole
+Spain,66,Male,Live,A. fumigatus,COPD,Corticosteroids and Voriconazole
+Spain,71,Male,Live,A. fumigatus,Hypertension and Hyperlipidemia,Methylprednisolone then Prednisolone and Isavuconazole
+Spain,73,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension and Hyperlipidemia,Methylprednisolone then Prednisolone and Isavuconazole
+Spain,67,Female,Dead,A. fumigatus and Candida spp.,Thalassemia minor,Methylprednisolone then Prednisolone and AmBisome and Isavuconazole
+India,20,Female,Dead,Aspergillius spp.,Tonic-clonic seizures and Disseminated intravascular coagulation,Without Steroids and Without Antifungal agents
+Australia,66,Female,Live,A. fumigatus,Hypertension and Osteopenia,Without Steroids and Voriconazole
+Germany,62,Female,Dead,A. fumigatus,Hypertension and COPD and Cholecystitis and Hypercholesterolemia,Corticosteroids and Voriconazole
+Germany,70,Male,Dead,A. fumigatus,Without Medical History,Without Steroids and Isavuconazole
+Germany,54,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension,Corticosteroids and Caspofungin and Voriconazole
+Germany,73,Male,Dead,A. fumigatus,Diabetes Mellitus and COPD and Bullous emphysema,Corticosteroids and Voriconazole
+France,59,Female,Live,A. fumigatus,Diabetes Mellitus and Hypertension and Obesity,Without Steroids and Without Antifungal agents
+France,69,Female,Live,A. fumigatus,Hypertension and Obesity,Dexamethasone and Without antifungal agents and Antifungal agents
+France,43,Male,Live,A. fumigatus,Asthma,Steroid and Without antifungal agents and Antifungal agents
+France,79,Male,Live,A. fumigatus,Diabetes Mellitus ,Dexamethasone and Without antifungal agents and Antifungal agents
+France,77,Male,Dead,A. fumigatus,Hypertension and Asthma,Dexamethasone and Voriconazole
+France,75,Female,Dead,A. fumigatus,Diabetes Mellitus and Hypertension,Dexamethasone and Caspofungin
+France,47,Male,Dead,A. fumigatus,Cancer,Without Steroids and Without Antifungal agents
+Belgium,86,Male,Dead,A. flavus,Hypercholesterinemia,Without Steroids and Without Antifungal agents
+Belgium,38,Male,Live,A. fumigatus,Obesity and Hypercholesterinemia,Without Steroids and Voriconazole and Isavuconazole
+Belgium,62,Male,Dead,A. fumigatus,Diabetes Mellitus ,Without Steroids and Voriconazole
+Belgium,73,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension and Obesity and Hypercholesterinemia,Without Steroids and Voriconazole
+Belgium,77,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension and Kidney Related Diseases,Steroid and Voriconazole
+Belgium,75,Male,Dead,A. fumigatus,Cancer,Without Steroids and Voriconazole
+France,74,Male,Dead,A. fumigatus,Hypertension and Cancer and Myelodysplastic syndrome,Without Steroids and Without Antifungal agents
+France,80,Male,Dead,A. flavus,Cancer,Without Steroids and Voriconazole and Isavuconazole
+Italy,73,Male,Dead,A. fumigatus,Diabetes Mellitus and Hypertension and Obesity and Hyperthyroidism,Without Steroids and AmBisome and Isavuconazole
+Austria,70,Male,Dead,A. fumigatus,Diabetes Mellitus and Hypertension and COPD and Obesity and Heart Related Diseases,Budesonide and Voriconazole
+Germany,80,Male,Dead,A. fumigatus,Pulmonary fibrosis,Without Steroids and AmBisome
+Germany,70,Male,Dead,A. fumigatus and C. ablicans,Without Medical History,Without Steroids and AmBisome
+Netherlands,74,Female,Dead,A. fumigatus,Polyarthritis,Without Steroids and Voriconazole and Caspofungin and Voriconazole and AmBisome
+Australia,66,Female,Live,A. fumigatus,Hypertension,Without Steroids and Voriconazole
+Argentina,57,Male,Live,A. fumigatus and C. ablicans,bronchiectasis,Without Steroids and AmBisome and Voriconazole
+Argentina,69,Male,Live,A. fumigatus,Diabetes Mellitus ,Without Steroids and Voriconazole
+Argentina,69,Female,Live,A. fumigatus,Diabetes Mellitus and Hypertension and Obesity,Dexamethasone and Voriconazole
+USA,56,Female,Live,A. fumigatus,Diabetes Mellitus and Hypertension and Obesity and Asthma and Coronary artery disease,Dexamethasone and Itraconazole
+Chile,56,Female,Live,A. fumigatus,Hypertension and Obesity,Prednisolone and Voriconazole
+Chile,71,Female,Live,A. fumigatus and A. niger and A. lentulus,Hypertension and COPD,Prednisolone and Voriconazole
+Chile,76,Male,Dead,A. fumigatus,Without Medical History,Prednisolone and Voriconazole
+Chile,73,Female,Live,A. niger,Hypertension,Prednisolone and Voriconazole
+Chile,76,Male,Live,A. terrei,Hypertension,Prednisolone and Voriconazole
+Chile,72,Male,Live,A. niger,Diabetes Mellitus and COPD,Prednisolone and Voriconazole
+Chile,62,Male,Live,A. niger,Without Medical History,Prednisolone and Without antifungal agents and Antifungal agents
+Brazil,71,Male,Dead,A. penicillioides,Diabetes Mellitus and Hypertension and Kidney Related Diseases,Without Steroids and Without Antifungal agents
+Brazil,35,Male,Dead,Aspergillius spp.,Obesity,Without Steroids and Without Antifungal agents
+China,63,Male,Dead,A. fumigatus,Hypertension,Corticosteroids and Caspofungin and Voriconazole
+China,65,Male,Dead,A. fumigatus,Without Medical History,Corticosteroids and Caspofungin and Voriconazole
+China,73,Male,Dead,A. flavus,Without Medical History,Without Steroids and Voriconazole and AmBisome
+China,69,Male,Dead,A. fumigatus,Without Medical History,Without Steroids and Voriconazole and Caspofungin
+Italy,60,Male,Dead,A. flavus,Without Medical History,Without Steroids and Isavuconazole
+Italy,58,Male,Dead,A. niger,Diabetes Mellitus and COPD and Obesity,Without Steroids and Isavuconazole
+Italy,65,Male,Dead,A. baumannii,Without Medical History,Without Steroids and Isavuconazole
+Italy,58,Male,Dead,Aspergillius spp.,Without Medical History,Without Steroids and Isavuconazole
+Italy,73,Female,Dead,A. flavus,Without Medical History,Without Steroids and Isavuconazole
+Italy,79,Male,Dead,A. fumigatus,Without Medical History,Without Steroids and Isavuconazole
+Italy,50,Female,Live,A. fumigatus,Obesity and Solid Organ Transplant,Without Steroids and Isavuconazole and AmBisome
+Pakistan,81,Male,Dead,A. flavus,Diabetes Mellitus ,Without Steroids and Amphotericin B
+Pakistan,57,Male,Dead,A. fumigatus and A. flavus,Diabetes Mellitus and Hypertension,Without Steroids and Amphotericin B
+Pakistan,85,Female,Dead,A. niger,Diabetes Mellitus and Hypertension,Without Steroids and Voriconazole
+Pakistan,51,Female,Live,A. flavus,Diabetes Mellitus ,Without Steroids and Voriconazole
+France,87,Female,Dead,Aspergillius spp.,Without Medical History,Methylprednisolone and Voriconazole
+Denmark,63,Female,Dead,A. fumigatus,Hypertension,Without Steroids and Voriconazole
+Denmark,53,Female,Dead,A. fumigatus,Asthma,Methylprednisolone then Prednisolone and Voriconazole
+India,36,Male,Live,A. niger and Mucorales spp.,Diabetes Mellitus and Acute respiratory distress syndrome ,Dexamethasone and AmBisome and Posaconazole
+Brazil,71,Male,Dead,A. penicillioides,Diabetes Mellitus and Hypertension and Kidney Related Diseases,Without Steroids and Without Antifungal agents
+Switzerland,55,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension and Obesity,Without Steroids and Voriconazole
+Switzerland,65,Male,Dead,A. fumigatus,Hypertension and Obesity and Respiratory Diseases and Pulmonary fibrosis,Without Steroids and Voriconazole
+Switzerland,66,Male,Live,A. fumigatus,Asthma,Without Steroids and Voriconazole
+Netherlands,73,Female,Dead,A. fumigatus,Without Medical History,Glucocorticoids and Antifungal
+Netherlands,68,Male,Dead,A. fumigatus,Chest Related Diseases,Without Steroids and Antifungal agents
+France,54,Male,Live,A. fumigatus,Hypertension and COPD and Solid Organ Transplant and Heart Related Diseases,Prednisolone and AmBisome
+France,68,Male,Dead,A. fumigatus,Kidney Related Diseases,Prednisolone and AmBisome
+France,63,Male,Dead,A. fumigatus,Obesity and Gastric ulcer,Without Steroids and Voriconazole and Isavuconazole
+France,68,Male,Live,A. fumigatus,COPD and Atherosclerosis and Sarcopenia,Dexamethasone and Voriconazole
+China,46,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension,Glucocorticoids and Voriconazole
+France,87,Female,Dead,Aspergillius spp.,Without Medical History,Methylprednisolone and Voriconazole
+France,74,Male,Dead,A. fumigatus,Hypertension and Cancer,Without Steroids and Without Antifungal agents
+Iran,66,Female,Dead,A. fumigatus and A. terreus,Immunocompetent,Dexamethasone and Voriconazole and Capsofungin
+Iran,42,Female,Dead,Aspergillius spp.,Diabetes Mellitus and Cancer,Without Steroids and AmBisome
+Brazil,68,Female,Dead,A. fumigatus and A. flavus ,Diabetes Mellitus and Hypertension and Kidney Related Diseases,Prednisolone and Voriconazole
+Brazil,66,Male,Dead,A. fumigatus,Diabetes Mellitus and Hypertension,Prednisolone and Voriconazole
+Brazil,74,Male,Dead,A. fumigatus,Diabetes Mellitus and Hypertension,Prednisolone and Voriconazole
+Kuwait,40,Male,Dead,A. niger,Without Medical History,Methylprednisolone and Caspofungin and voriconazole
+Kuwait,60,Male,Dead,A. niger,Diabetes Mellitus and Hypertension and Ischemic Heart Disease,Hydrocortisone and AmBisome
+USA,79,Male,Live,A. fumigatus and R. arrhizus,Diabetes Mellitus and Hypertension,Dexamethasone and Voriconazole and AmBisome
+Japan,72,Male,Dead,A. fumigatus,Hypertension and COPD,Dexamethasone and Micafungin and Voriconazole
+Iran,59,Male,Live,A. tubingensis,Mild hemoptysis,Dexamethasone and Voriconazole
+Italy,73,Male,Dead,A. niger,Diabetes Mellitus and Hypertension,Dexamethasone and Voriconazole
+Denmark,52,Male,Live,A. fumigatus,Diabetes Mellitus and Heart Related Diseases,Without Steroids and Voriconazole
+Argentina,85,Male,Dead,A. flavus,Hypertension,Dexamethasone and Anidulafungin and Voriconazole
+Hungary,85,Male,Dead,A. fumigatus and C. metapsilosis,Hypertension and Atherosclerosis,Methylprednisolone and Fluconazole and AmBisome
+Hungary,75,Female,Dead,A. fumigatus,Diabetes Mellitus and Hypertension and COPD and Hypothyroidism and Vascular dementia,Dexamethasone and AmBisome
+Hungary,60,Male,Live,A. fumigatus,Diabetes Mellitus and Hypertension and Cancer,Without Steroids and Caspofungin and Isavuconazole
+USA,72,Male,Live,Aspergillius spp.,Respiratory Diseases,Without Steroids and Voriconazole and Micafungin
+Denmark,52,Male,Live,A. fumigatus,Diabetes Mellitus and Heart Related Diseases,Without Steroids and Voriconazole
+Italy,73,Male,Dead,A. fumigatus,Diabetes Mellitus and Hypertension and Obesity and Hyperthyroidism,Without Steroids and AmBisome and Isavuconazole
+India,37,Male,Dead,A. fumigatus,Without Medical History,Corticosteroids and Voriconazole
+Hungary,75,Female,Dead,A. fumigatus,Diabetes Mellitus and COPD and Hypothyroidism,Dexamethasone and AmBisome
+Hungary,60,Male,Live,A. fumigatus,Diabetes Mellitus and Cancer and Heart Related Diseases,Without Steroids and Caspofungin and Isavuconazole
+Ireland,66,Male,Dead,A. fumigatus and C. ablicans,Diabetes Mellitus and Hypertension and Hyperlipidemia and Obesity,Without Steroids and AmBisome
+India ,52,Male,Live,Aspergillius spp.,Diabetes Mellitus and Hypertension,Without Steroids and Amphotericin B
+Egypt,47,Male,Live,Aspergillius spp.,Daibetes Mellitus and Respiratory Disease,Without Steroids and AmBisome
+brazil,65,Female,Dead,C. orthopsilosis,Diabetes Mellitus and Hypertension and Renal Replacement Therapy,Prednisolone and Micafungin and Amphotericin B
+brazil,50,Male,Dead,C. albicans,Diabetes Mellitus and Kidney Related Diseases,Prednisolone and Micafungin
+brazil,77,Female,Dead,C. krusei,Diabetes Mellitus and Hypertension and Obesity and Renal Replacement Therapy,Prednisolone and Without antifungal agents and Antifungal agents
+brazil,66,Male,Dead,C. lusitaniae,Diabetes Mellitus and Hypertension and Heart failure and Stoke,Prednisolone and Amphotericin B and Fluconazole
+Portugal,70,Male,Dead,C. albicans,Diabetes Mellitus and Catheter Infection,Dexamethasone and Fluconazole and Fluytosine and Voriconazole and Anidulafungin
+Japan,68,Male,Dead,C. dubliniensis,Cancer and Myocardial Infarction ,Methylprednisolone and Micafungin
+Turkey,71,Male,Dead,C. auris ,Diabetes Mellitus and Cancer and myocardial infarction ,Without Steroids and Caspofungin
+Lebanon,34,Male,Dead,C. duobushaemulonii,Without Medical History,Without Steroids and Fluconazole and Capsofungin
+Iran,83,Female,Live,C. glabrata ,Without Medical History,Without Steroids and Fluconazole
+India,42,Male,Live,C. albicans,Diabetes Mellitus ,Corticosteroids and Amphotericin B
+India,36,Male,Dead,C. auris ,Without Medical History,Dexamethasone and Fluconazole
+Indonesia,56,Male,Live,Candida spp.,HIV/AIDS,Without Steroids and Fluconazole
+China,54,Male,Live,C. albicans,Hypertension and Liver dysfunction and Anemia and Thrombocytopenia,Without Steroids and Amphotericin B and Polymyxin
+India,42,Male,Dead,C. albicans,Diabetes Mellitus and Hypertension,Dexamethasone and Voriconazole and Fluconazole
+Israel,67,Female,Dead,C. parapsilosis,Diabetes Mellitus and Catheter Infection,Corticosteroids and Caspofungin
+Israel,69,Male,Dead,C. albicans,Hypertension,Corticosteroids and Without antifungal agents and Antifungal agents
+Israel,69,Male,Dead,C. glabrata ,Diabetes Mellitus and Hypertension and Ischaemic heart disease,Corticosteroids and Without antifungal agents and Antifungal agents
+Brazil,74,Female,Dead,C. auris ,Diabetes Mellitus and Catheter Infection and Chronic Renal Failure and Coronary Artery Disease,Corticosteroids and Anidulafungin
+Brazil,68,Male,Dead,C. auris ,Diabetes Mellitus and Catheter Infection and Obesity and Chronic Renal Failure,Corticosteroids and Anidulafungin
+Brazil,88,Female,Dead,C. auris ,Diabetes Mellitus and Catheter Infection and Dementia,Corticosteroids and Anidulafungin
+Lebanon,74,Male,Dead,C. auris ,Catheter Infection and Cancer,Corticosteroids and Caspofungin
+Lebanon,78,Female,Live,C. auris ,Catheter Infection and Cancer,Corticosteroids and Without antifungal agents and Antifungal agents
+Lebanon,65,Male,Dead,C. auris ,Catheter Infection and Brain abscess,Corticosteroids and Caspofungin
+Lebanon,75,Male,Live,C. auris ,Catheter Infection and Cancer,Corticosteroids and Caspofungin
+Lebanon,82,Female,Live,C. auris ,Catheter Infection and COPD and Respiratory Diseases,Corticosteroids and Caspofungin
+Lebanon,66,Male,Dead,C. auris ,Catheter Infection and Cancer,Corticosteroids and Caspofungin
+Lebanon,68,Male,Live,C. auris ,Catheter Infection,Corticosteroids and Caspofungin
+Lebanon,68,Female,Live,C. auris ,Catheter Infection,Corticosteroids and Caspofungin
+Lebanon,80,Female,Dead,C. auris ,Achalasia and Malignant ascites,Corticosteroids and Caspofungin
+Lebanon,71,Male,Live,C. auris ,Catheter Infection and Cancer,Corticosteroids and Caspofungin
+Lebanon,83,Female,Dead,C. auris ,Catheter Infection and COPD,Corticosteroids and Caspofungin
+Lebanon,36,Female,Live,C. auris ,Catheter Infection and Cancer,Corticosteroids and Caspofungin
+Lebanon,85,Male,Live,C. auris ,Catheter Infection,Corticosteroids and Caspofungin
+Lebanon,79,Male,Live,C. auris ,Catheter Infection,Corticosteroids and Caspofungin
+Italy,38,Female,Live,A. fumigatus and C. parapsilosis,Without Medical History,Prednisolone and Without antifungal agents and Antifungal agents
+United Arab Emirates,40,Male,Live,C. albicans,Without Medical History,Without Steroids and AmBisome and Voriconazole
+Serbia,75,Female,Dead,C. albicans,Hypertension,Methylprednisolone and Fluconazole and Capsofungin
+Sri Lanka,62,Female,Live,C. endophthalmitis,Diabetes Mellitus ,Prednisolone and Voriconazole and Ambisome
+Italy,56,Male,Live,C. endophthalmitis,Without Medical History,Methylprednisolone and Fluconazole
+China,54,Female,Live,C. albicans,Cancer,Without Steroids and Fluconazole
+Iran,67,Female,Dead,C. albicans,Diabetes Mellitus and Myocardial Infarction,Corticosteroids and Voriconazole
+USA,41,Male,Live,C. auris ,Hypertension,Without Steroids and Micafungin
+USA,72,Male,Live,C. auris ,Dyslipidemia,Corticosteroids and Micafungin
+USA,51,Male,Dead,C. auris ,Abdominal Abscess and Chronic Anoxic Brain Injury,Without Steroids and Without Antifungal agents
+USA,38,Female,Dead,C. auris ,Diabetes Mellitus and Hypertension and Obesity and Systemic Lupus Erythematosus,Corticosteroids and Without antifungal agents and Antifungal agents
+USA,65,Male,Dead,C. auris ,Hypertension,Corticosteroids and Without antifungal agents and Antifungal agents
+USA,34,Male,Dead,C. auris ,Obesity,Without Steroids and Without Antifungal agents
+USA,68,Female,Dead,C. auris ,Diabetes Mellitus ,Corticosteroids and Without antifungal agents and Antifungal agents
+USA,42,Female,Live,C. auris ,Diabetes Mellitus and Hypertension and Chronic Anoxic Brain Injury,Without Steroids and Micafungin
+Turkey,46,Male,Dead,C. auris ,Catheter Infection and Cancer and Heart Related Diseases,Without Steroids and Caspofungin
+Turkey,49,Male,Dead,C. auris ,Catheter Infection,Without Steroids and Without Antifungal agents
+Iran,51,Male,Dead,C. auris ,Diabetes Mellitus and Hypertension and Obesity,Dexamethasone and Caspofungin and Anidulafungin
+Iran,51,Male,Dead,C. auris and C. glabrata,Obesity,Dexamethasone and Isavuconazole and Anidulafungin
+Iran,55,Male,Dead,C. auris and C. glabrata,Diabetes Mellitus and Hypertension and Coronary Artery Disease,Dexamethasone and Anidulafungin
+Iran,60,Female,Dead,C. auris ,Obesity,Methylprednisolone and Caspofungin and Anidulafungin and Voriconazole
+Iran,64,Male,Dead,C. auris ,Acute Kidney Injury,Methylprednisolone and Caspofungin and Voriconazole and Amphotericin B
+Iran,64,Male,Dead,C. auris and C. glabrata,Hypertension and Obesity and Hipothyroidism,Methylprednisolone and Anidulafungin and Isavuconazole
+Iran,66,Male,Live,C. auris ,Diabetes Mellitus and Hypertension and Coronary Artery Disease and Valvular Heart Disease,Dexamethasone and Voriconazole and Capsofungin
+Iran,58,Male,Dead,C. auris ,Hypertension and Obesity,Hydrocortisone and Anidulafungin
+USA,60,Female,Dead,C. glabrata ,Diabetes Mellitus ,Dexamethasone and Micafungin
+Spain,47,Male,Live,C. albicans,Hypertension and Obesity,Without Steroids and Fluconazole and AmBisome and Fluconazole
+Iran,66,Male,Dead,C. tropicalis ,Without Medical History,Without Steroids and Amphotericin B
+India,76,Female,Live,C. albicans,Dyslipidemia,Without Steroids and Moxifloxacin and Amphotericin B and Itraconazole
+Italy,67,Male,Live,C. albicans,Catheter Infection and Cerebral ischemia,IL-6 and Caspofungin and Fluconazole
+Italy,58,Male,Live,C. tropicalis ,Hypertension,IL-6 and Caspofungin
+Italy,78,Male,Live,C. parapsilosis,Diabetes Mellitus and Obesity,IL-6 and Caspofungin and Fluconazole
+Netherlands,76,Male,Dead,C. albicans,Catheter Infection and Pneumonia,Without Steroids and Without Antifungal agents
+Netherlands,68,Male,Dead,C. albicans,Hypertension and Catheter Infection and Pneumonia,Without Steroids and Caspofungin
+Netherlands,38,Male,Dead,C. glabrata ,Hypertension and Catheter Infection and Dyslipidemia and Pneumonia,Without Steroids and Micafungin and Caspofungin and Amphotericin B
+Netherlands,64,Male,Live,C. albicans and C. tropicalis,Hypertension and Catheter Infection and Dyslipidemia and Stoke,Without Steroids and Caspofungin
+India,25,Female,Live,C. auris ,Chronic Liver Disease and Acute Kidney Disease,Without Steroids and Amphotericin B
+India,52,Male,Live,C. auris ,Diabetes Mellitus and Hypertension,Corticosteroids and Micafungin and Amphotericin B
+India,82,Female,Dead,C. auris ,Diabetes Mellitus and Hypertension and Hypothoidism,Corticosteroids and Micafungin
+India,86,Female,Dead,C. auris ,Diabetes Mellitus and Hypertension and Ischaemic heart disease and Chronic Liver Disease,Corticosteroids and Micafungin
+India,66,Male,Live,C. auris ,Diabetes Mellitus and Hypertension and Asthma,Without Steroids and Micafungin and Amphotericin B
+India,71,Male,Dead,C. auris ,Hypothyroidism,Corticosteroids and Micafungin
+India,67,Male,Live,C. auris ,Diabetes Mellitus and Hypertension and COPD,Corticosteroids and Micafungin and Amphotericin B
+India,72,Male,Dead,C. auris ,Hypertension and Chronic Liver Disease,Corticosteroids and Micafungin
+India,81,Male,Dead,C. auris ,Diabetes Mellitus and Hypertension and Ischaemic heart disease,Corticosteroids and Micafungin
+India,69,Male,Live,C. auris ,Hypertension and Asthma,Corticosteroids and Micafungin
+India,56,Male,Live,C. tropicalis ,Hypertension and COPD,Without Steroids and Micafungin
+India,69,Male,Live,C. albicans,Diabetes Mellitus and Hypertension and Ischaemic heart disease and Obesity,Without Steroids and Micafungin
+India,43,Female,Live,C. albicans,Hypertension,Corticosteroids and Micafungin
+India,47,Male,Dead,C. albicans,Diabetes Mellitus and Asthma,Without Steroids and Amphotericin B and Micafungin
+India,66,Male,Dead,C. krusei,Diabetes Mellitus ,Corticosteroids and Amphotericin B
+Brazil,44,Male,Live,C. albicans,Diabetes Mellitus and Catheter Infection and Dyslipidemia and Psoriasis and Schizophrenia,Methylprednisolone and Anidulafungin
+Brazil,71,Female,Dead,C. glabrata ,Hypertension and Catheter Infection and Coronary Artery Disease,Methylprednisolone and Without antifungal agents and Antifungal agents
+Brazil,69,Female,Dead,C. glabrata ,Diabetes Mellitus and Hypertension and Catheter Infection and Obesity and COPD and Cardiac Failure,Methylprednisolone and Anidulafungin
+Brazil,37,Female,Dead,C. albicans,Catheter Infection and Asthma,Methylprednisolone then Dexamethasone and Dexamethasone and Amphotericin B and Fluconazole
+Brazil,87,Female,Dead,C. tropicalis ,Hypertension and Catheter Infection and Atrial Fibrillation,Methylprednisolone and Anidulafungin
+Brazil,66,Male,Live,C. albicans,Hypertension and Catheter Infection,Methylprednisolone then Dexamethasone and Dexamethasone and Anidulafungin
+Brazil,91,Male,Dead,C. albicans,Catheter Infection and Asthma,Methylprednisolone then Dexamethasone and Dexamethasone and Anidulafungin
+Brazil,54,Male,Live,C. albicans,Diabetes Mellitus and Hypertension and Obesity and Raynaud syndrome,Dexamethasone and Fluconazole
+Brazil,41,Male,Dead,C. albicans,Catheter Infection and HIV and Hepatitis C and Myocardiopath,Prednisolone and Fluconazole
+Brazil,57,Male,Dead,C. albicans,Diabetes Mellitus and Hypertension and Catheter Infection,Dexamethasone and Voriconazole and Anidulafungin
+Brazil,59,Male,Dead,C. albicans,Hypertension and Catheter Infection and Chronic Renal Failure,Dexamethasone then Hydrocortisone and Hydrocortisone and Fluconazole
+Indonesia,54,Female,Live,C. tropicalis ,Diabetes Mellitus and Hypertension,Hydrocortisone and Micafungin
+USA,67,Male,Live,C. dubliniensis,"Diabetes Mellitus and Hypertension and COPD and Chronic Kidney Disease and Peripheral Vascular Disease, and Hepatitis C",Dexamethasone and Micafungin and Fluconazole
+Poland,73,Female,Live,C. albicans and C. glabrata,Diabetes Mellitus and Hypertension and Chronic Kidney Disease,Dexamethasone and Budesonide and Fluconazole
+India,75,Male,Live,C. glabrata ,Diabetes Mellitus and Hypertension and Ischaemic heart disease and Chronic Kidney Disease,Without Steroids and Caspofungin and Fluconazole
+Japan,55,Male,Live,C. albicans,Diabetes Mellitus ,Without Steroids and Micafungin and Voriconazole and Micafungin and Fluconazole
+Hungary,79,Male,Dead,C. albicans and C. glabrata,Hypertension and Cancer and Heart Related Diseases and Chronic Liver Failure and Atherosclerosis ,Without Steroids and Caspofungin and Fluconazole and Voriconazole and AmBisome
+Hungary,76,Male,Dead,C. albicans,Hypertension and Cancer and Heart Related Diseases,Without Steroids and Caspofungin and AmBisome
+Hungary,90,Male,Dead,C. glabrata ,Hypertension and Heart Related Diseases and Vascular Dementia,Without Steroids and Fluconazole
+Hungary,77,Male,Dead,C. albicans,Diabetes Mellitus and Hypertension and COPD and Chronic Renal Failure and Vascular Dementia,Without Steroids and Caspofungin
+Hungary,75,Male,Live,C. albican and C. parapsilosis,Hypertension,Dexamethasone and Caspofungin and Voriconazole
+Italy,75,Male,Live,C. albican and C. parapsilosis,Without Medical History,Prednisolone and Echinocandin
+Italy,75,Male,Dead,C. albicans,Without Medical History,Without Steroids and Without Antifungal agents
+Italy,86,Female,Dead,C. glabrata ,Without Medical History,Prednisolone and Without antifungal agents and Antifungal agents
+Italy,69,Male,Live,C. albicans,Without Medical History,Prednisolone and Without antifungal agents and Antifungal agents
+Italy,38,Female,Live,C. parapsilosis,Without Medical History,Prednisolone and Without antifungal agents and Antifungal agents
+Israel,62,Female,Live,C. albicans,Hypertension and Obesity,Without Steroids and Caspofungin and Fluconazole
+Israel,55,Male,Live,C. albicans,Hypertension and Solid Organ Transplant,Without Steroids and Caspofungin and Fluconazole
+Israel,57,Male,Live,C. parapsilosis,Without Medical History,Without Steroids and Caspofungin and Fluconazole
+Israel,67,Male,Live,C. parapsilosis,Without Medical History,Without Steroids and Caspofungin
+Israel,59,Female,Live,C. lusitaniae,Diabetes Mellitus and Hypertension and Obesity,Without Steroids and Without Antifungal agents
+Israel,62,Male,Dead,C. albicans,Diabetes Mellitus and Hypertension and Obesity and Dyslipidemia,Without Steroids and Caspofungin
+Israel,17,Female,Dead,C. albicans,Without Medical History,Methylprednisolone and Caspofungin
+Israel,53,Male,Live,C. albicans and C. glabrata,Diabetes Mellitus and Hypertension,Dexamethasone and Caspofungin and Fluconazole
+Israel,78,Male,Dead,C. parapsilosis,Hypertension and COPD,Dexamethasone and Without antifungal agents and Antifungal agents
+Israel,59,Male,Dead,C. tropicalis ,Diabetes Mellitus and Hypertension,Without Steroids and Without Antifungal agents
+Israel,58,Male,Dead,C. albicans,Hypertension and Obesity,Without Steroids and Caspofungin and Fluconazole
+Israel,38,Male,Live,C. glabrata ,Hypertension,Prednisolone and Caspofungin and Fluconazole
+Japan,75,Male,Live,C. albicans,Atrial Fibrillation,Without Steroids and Amphotericin B
+Japan,71,Male,Dead,C. auris ,Cancer and pre-existing brain edema and hypoxic encephalopathy,Without Steroids and Micafungin and AmBisome
+USA,69,Male,Live,C. auris ,Hypertension,Corticosteroids and Micafungin
+USA,68,Male,Dead,C. auris ,Without Medical History,Without Steroids and Micafungin
+USA,68,Female,Dead,C. auris ,Diabetes Mellitus ,Corticosteroids and Without antifungal agents and Antifungal agents
+USA,71,Female,Live,C. auris ,Cancer and Stem Cell Transplantation,Corticosteroids and Micafungin and Amphotericin B
+USA,71,Male,Dead,C. auris and C. pelliculosa,Diabetes Mellitus and Hypertension,Corticosteroids and Without antifungal agents and Antifungal agents
+USA,75,Female,Live,C. auris ,Diabetes Mellitus ,Corticosteroids and Micafungin
+USA,77,Male,Dead,C. auris ,Diabetes Mellitus and Hypertension and Dyslipidemia,Corticosteroids and Without antifungal agents and Antifungal agents
+USA,75,Female,Live,C. auris ,Diabetes Mellitus ,Corticosteroids and Micafungin
+USA,34,Male,Dead,C. auris ,Obesity,Without Steroids and Without Antifungal agents
+USA,38,Female,Dead,C. auris ,Diabetes Mellitus and Hypertension and Obesity and Systemic Lupus Erythematosus,Corticosteroids and Without antifungal agents and Antifungal agents
+USA,71,Male,Dead,C. auris ,Diabetes Mellitus ,Corticosteroids and Without antifungal agents and Antifungal agents
+Turkey,71,Female,Dead,C. auris ,Diabetes Mellitus and Hypertension and Catheter Infection and COPD and Chronic Renal Failure and Artial Fibrillation,Without Steroids and Without Antifungal agents
+Iran,46,Male,Live,C. auris ,Obesity,Dexamethasone and Voriconazole and Capsofungin
+Iran,66,Male,Live,C. auris ,Diabetes Mellitus and Hypertension and Coronary Artery Disease and Valvular Heart Disease,Dexamethasone and Voriconazole and Capsofungin
+Iran,36,Male,Live,C. auris ,Diabetes Mellitus and Obesity,Methylprednisolone then Hydrocortisone and Hydrocortisone and Capsofungin
+Iran,54,Female,Dead,C. auris ,Hypertension and Obesity,Dexamethasone and Amphotericin B and Caspofungin and voriconazole
+Brazil,59,Male,Live,C. auris ,Venous Thrombosis,Without Steroids and Anidulafungin
+Brazil,70,Female,Live,C. albicans,Hypertension and Dyslipidemia and Hypothyroidism,Without Steroids and Nystatin
+Brazil,74,Female,Dead,C. auris ,Diabetes Mellitus and Hypertension and Chronic Renal Failure,Without Steroids and Colistin and Anidulafungin
+USA,76,Female,Dead,A. niger and C. blankii,Diabetes Mellitus and Coronary Artery Disease,Dexamethasone and Voriconazole
+Italy,77,Female,Dead,C. parapsilosis,Multiple Sclerosis,Without Steroids and Isavuconazole and AmBisome
+Italy,36,Male,Live,C. albicans,Oligophrenic,Without Steroids and Isavuconazole and AmBisome
+Italy,36,Male,Live,C. albicans,Without Medical History,Without Steroids and Isavuconazole and AmBisome
+Italy,77,Female,Dead,C. parapsilosis,Multiple Sclerosis,Without Steroids and Isavuconazole and AmBisome
+Italy,79,Male,Dead,C. glabrata ,Diabetes Mellitus and Hypertension and Ischaemic heart disease,Without Steroids and Amphotericin B
+Hungary,85,Male,Dead,A. fumigatus and C. metapsilosis,Hypertension and Atherosclerosis,Methylprednisolone and Fluconazole and AmBisome
+Hungary,80,Female,Dead,C. glabrata ,Diabetes Mellitus and Hypertension and Heart Related Diseases and Vascular Dementia,Dexamethasone and Caspofungin
+Iran,64,Male,Live,Candida spp.,Diabetes Mellitus and Hypertension,Without Steroids and Amphotericin B and Voriconazole and Amphotericin B
+Iran,51,Male,Live,Candida spp.,Hypertension,Without Steroids and Amphotericin B and Voriconazole and Amphotericin B
+Iran,64,Female,Live,Candida spp.,Diabetes Mellitus and Hypertension and Asthma and Hypothyroidism,Without Steroids and Amphotericin B and Voriconazole and Amphotericin B
+Iran,53,Male,Live,Candida spp.,Diabetes Mellitus and Hypertension and Chronic Renal Failure,Without Steroids and Amphotericin B and Voriconazole and Amphotericin B
+Iran,63,Male,Live,Candida spp.,Hypertension,Without Steroids and Amphotericin B and Voriconazole and Amphotericin B
+India,35,Male,Live,Mucormycosis,Diabetes Mellitus ,Corticosteroids and Amphotericin B
+India,50,Male,Live,Mucormycosis,Without Medical History,Without Steroids and Voriconazole and Posaconazole
+India,70,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+Switzerland,39,Male,Live,R. arrhizus,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole and Isavuconazole
+Switzerland,75,Female,Dead,R. arrhizus,Diabetes Mellitus ,Without Steroids and Isavuconazole and Posaconazole and AmBisome
+Portugal,62,Female,Dead,R. microsporus,Cancer,Without Steroids and Fluconazole and AmBisome
+UAE,35,Male,Live,R. arrhizus,Diabetes Mellitus ,Dexamethasone and AmBisome and Voriconazole
+Iran,73,Female,Dead,Mucormycosis,Diabetes Mellitus and Hypertension and Chronic Kidney Disease,Dexamethasone and Amphotericin B
+Syria,41,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+India,42,Male,Dead,Mucormycosis,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+India,56,Male,Dead,Mucormycosis,Diabetes Mellitus and Chronic Kidney Disease,Without Steroids and Amphotericin B
+India,62,Male,Dead,Mucormycosis,Without Medical History,Without Steroids and Amphotericin B
+India,65,Male,Dead,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B
+India,68,Male,Dead,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B
+Bangladesh,68,Female,Dead,Mucormycosis,Hypertension and Chronic Kidney Disease and Ischemic Heart Disease,Without Steroids and AmBisome
+India,75,Male,Dead,Mucormycosis,Diabetes Mellitus and Hypertension,Dexamethasone and Amphotericin B and Posaconazole
+Malaysia ,58,Male,Dead,A. niger and R. oryzae,Diabetes Mellitus and Hypertension and Ischemic Heart Disease,Methylprednisolone and Amphotericin B
+Iran,79,Female,Dead,L. ramose,Diabetes Mellitus and Hypertension and Ischemic Heart Disease,Without Steroids and AmBisome
+USA ,16,Female,Dead,Rhizopus spp.,Relapsing B-cell,Dexamethasone and Amphotericin B
+USA ,30,Male,Live,Mucormycosis,Without Medical History,Without Steroids and Amphotericin B
+USA ,47,Male,Live,Mucormycosis,Without Medical History,Without Steroids and Amphotericin B and Isavuconazole
+Nepal ,52,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and Posaconazole
+USA ,72,Female,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Dexamethasone and AmBisome and Posaconazole
+India,48,Male,Live,Mucormycosis,Without Medical History,Without Steroids and AmBisome
+India,38,Female,Dead,Mucormycosis,Without Medical History,Without Steroids and AmBisome and Posaconazole
+India,62,Male,Dead,Mucormycosis,Without Medical History,Without Steroids and AmBisome
+Qatar,59,Male,Live,Rhizopus spp.,Diabetes Mellitus ,Dexamethasone and AmBisome and Posaconazole and Anidulafungin
+India,36,Male,Live,A. niger and Mucorales spp.,Without Medical History,Without Steroids and AmBisome and Posaconazole
+India,54,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+India,58,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+India,47,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole
+India,50,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole and TRAM
+India,70,Male,Live,Mucormycosis,Without Medical History,Without Steroids and Amphotericin B
+Australia,56,Male,Live,R. oryzae,Without Medical History,Without Steroids and AmBisome and Posaconazole
+India,43,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole
+India,48,Male,Live,Mucormycosis,Without Medical History,Without Steroids and Ambisome and Posaconazole
+India,50,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole
+India,53,Male,Live,R. microsporus,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole
+Iran,73,Female,Live,Rhizopus spp.,Diabetes Mellitus ,Dexamethasone then Methylprednisolone and   and Amphotericin B and Posaconazole
+India,67,Female,Live,Aspergillus spp. and Mucomycosis,Diabetes Mellitus ,Without Steroids and Voriconazole and AmBisome and Posaconazole
+Korea,37,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and Amphotericin B
+India,9,Female,Dead,Mucormycosis,Without Medical History,Without Steroids and Without Antifungal agents
+Iran,71,Male,Dead,Mucormycosis,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+India,46,Male,Live,Mucormycosis,Without Medical History,Without Steroids and Amphotericin B and Posaconazole
+India,47,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole and AmBisome
+India,52,Female,Live,Mucormycosis,Without Medical History,Without Steroids and Posaconazole
+India,66,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+India,54,Male,Live,Mucormycosis,Chronic Kidney Disease,Without Steroids and Amphotericin B
+India,64,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Caspofungin
+India,45,Male,Dead,Rhizopus spp.,Diabetes Mellitus ,Without Steroids and Clotrimazole
+Iran,40,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+Iran,49,Male,Live,Mucormycosis,Without Medical History,Without Steroids and AmBisome and Itraconazole
+Iran,50,Male,Live,Mucormycosis,Diabetes Mellitus ,Corticosteroids and AmBisome and Posaconazole
+Portugal ,75,Male,Live,Mucormycosis,Diabetes Mellitus and Obesity,Without Steroids and AmBisome and Isavuconazole
+Japan ,58,Male,Dead,Rhizopus spp.,Diabetes Mellitus and Hypertension,Methylprednisolone and Without antifungal agents and Antifungal agents
+Tunisia,62,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and AmBisome
+India,41,Male,Live,Aspergillus spp. and Mucomycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Voriconazole
+India,60,Female,Live,Rhizopus spp.,Diabetes Mellitus ,Without Steroids and Ambisome and Posaconazole
+India,59,Male,Live,Mucormycosis,Diabetes Mellitus ,Methylprednisolone and AmBisome and Isavuconazole and Posaconazole
+Iran,63,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and AmBisome
+India,51,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole
+Lebanon,56,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and Amphotericin B and Voriconazole
+India,42,Male,Live,Mucormycosis,Without Medical History,Without Steroids and AmBisome and Posaconazole and TRAM
+India,44,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole and TRAM
+India,50,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+India,67,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole and TRAM and Isauvaconazole
+India,70,Male,Dead,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole and TRAM
+Iran,31,Male,Live,Mucormycosis,Without Medical History,Dexamethasone and AmBisome
+India,35,Male,Live,R. arrhizus,Without Medical History,Without Steroids and Amphotericin B and Posaconazole
+India,49,Male,Live,R. arrhizus,Diabetes Mellitus and Hypertension,Without Steroids and Amphotericin B and Posaconazole
+India,49,Male,Dead,R. arrhizus,Without Medical History,Without Steroids and Without Antifungal agents
+India,73,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension and Chronic Kidney Disease and Coronary Artery Disease,Without Steroids and Amphotericin B and Posaconazole
+Pakistan,60,Female,Live,Mucormycosis,Diabetes Mellitus and Hypertension and Ischemic Heart Disease,Without Steroids and AmBisome and Posaconazole
+USA ,34,Female,Dead,Mucormycosis,Diabetes Mellitus and Hypertension and Asthma ,Without Steroids and Amphotericin B and Isavuconazole
+Iran,38,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B
+Iran,41,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B
+Iran,44,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B
+Iran,50,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B
+Iran,55,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B
+Iran,58,Female,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B
+Iran,61,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B
+Iran,68,Female,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B
+Nepal ,39,Male,Live,Mucormycosis,Without Medical History,Without Steroids and AmBisome and Posaconazole
+Bulgaria,66,Male,Live,C. glabrata and Rhizopus spp.,Without Medical History,Without Steroids and Amphotericin B
+Iran,51,Female,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and AmBisome and Posaconazole
+Japan ,58,Male,Dead,Mucormycosis,Without Medical History,Methylprednisolone and Micafungin
+India,29,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole
+India,31,Male,Live,Mucormycosis,Without Medical History,Dexamethasone and Amphotericin B and Posaconazole
+India,32,Male,Live,Mucormycosis,IgA nephropathy,Prednisolone and AmBisome and Posaconazole
+India,32,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole
+India,32,Male,Dead,Mucormycosis,Without Medical History,Without Steroids and Without Antifungal agents
+Iran,40,Female,Dead,Mucormycosis,Without Medical History,Dexamethasone and Amphotericin B and Posaconazole
+Iran,54,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B and Posaconazole
+Spain ,64,Male,Live,L. corymbifera,Diabetes Mellitus and Hypertension and Liver transplantation and Obesity,Without Steroids and Amphotericin B and Isavuconazole and Voriconazole and Posaconazole and Itraconazole
+Iran,54,Female,Live,Mucormycosis,Without Medical History,Dexamethasone and AmBisome and Posaconazole
+Iran,68,Male,Live,Aspergillus spp. and Mucomycosis,Without Medical History,Dexamethasone and AmBisome and Posaconazole
+India,52,Female,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and AmBisome and Fluconazole
+Iran,77,Female,Dead,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and Amphotericin B
+Germany,29,Female,Live,R. microsporus,Without Medical History,Without Steroids and AmBisome and isavuconazole
+USA ,60,Male,Dead,Rhizopus spp.,Diabetes Mellitus and Hypertension and Asthma and Hyperlipidemia,Dexamethasone and AmBisome and Posaconazole and Caspofungin
+Sri Lanka,59,Female,Live,Mucormycosis,Without Medical History,Without Steroids and AmBisome
+Malaysia,42,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B
+Brazil,67,Male,Live,R. microsporus,Diabetes Mellitus ,Without Steroids and AmBisome
+Iran,73,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Itraconazole
+Ethiopia,39,Female,Dead,Mucormycosis,Diabetes Mellitus ,Dexamethasone and AmBisome
+India,43,Male,Live,Mucormycosis,Without Medical History,Steroid and Amphotericin B
+India,40,Male,Live,R. arrhizus,Without Medical History,Dexamethasone and AmBisome
+India,42,Male,Dead,Candida spp. and Mucormycosis,Without Medical History,Dexamethasone and AmBisome
+India,46,Female,Live,Candida spp. and Mucormycosis,Diabetes Mellitus ,Dexamethasone and AmBisome
+India,55,Male,Dead,Candida spp. and Mucormycosis,Diabetes Mellitus ,Dexamethasone then Methylprednisolone and Methylprednisolone and AmBisome
+India,75,Male,Dead,Candida spp. and Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+India,46,Female,Dead,R. oryzae,Diabetes Mellitus ,Without Steroids and AmBisome
+India,60,Female,Dead,Mucormycosis,Diabetes Mellitus and Hypertension,Corticosteroids and AmBisome
+India,63,Male,Live,Aspergillus spp. and Mucomycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+India,67,Male,Dead,Aspergillus spp. and Mucomycosis,Diabetes Mellitus and Hypertension and Ischemic Heart Disease,Dexamethasone and Without antifungal agents and Antifungal agents
+India,70,Male,Dead,Aspergillus spp. and R. delemar,Without Medical History,Without Steroids and AmBisome
+Bulgaria,11,Male,Dead,Mucormycosis,Without Medical History,Without Steroids and Without Antifungal agents
+India,34,Male,Live,Mucormycosis,Old pancreatitis,Without Steroids and Amphotericin B and Posaconazole
+India,36,Male,Live,Mucormycosis,Without Medical History,Without Steroids and Without Antifungal agents
+India,44,Male,Live,Mucormycosis,Without Medical History,Without Steroids and Amphotericin B and Posaconazole
+India,45,Male,Dead,C. albicans and Mucomycosis,Chronic Liver Disease,Without Steroids and Fluconazole and Anidulafungin and AmBisome and Posaconazole
+India,45,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole
+India,46,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole
+India,46,Female,Dead,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B
+India,50,Female,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and Amphotericin B and Posaconazole
+India,50,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole
+India,51,Male,Live,Mucormycosis,Without Medical History,Dexamethasone then Methylprednisolone and Methylprednisolone and Amphotericin B
+India,59,Female,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and Amphotericin B and Posaconazole
+India,70,Female,Live,Mucormycosis,Diabetes Mellitus ,Methylprednisolone and AmBisome and Posaconazole
+USA ,41,Male,Live,Mucormycosis,Diabetes Mellitus,Steroid and Amphotericin B
+Romania,7,Male,Dead, Cunninghamella spp.,Beta-Thalassemia,Without Steroids and Without Antifungal agents
+Bangladesh,51,Female,Dead,Mucormycosis,Without Medical History,Methylprednisolone and Amphotericin B
+Palestine,34,Female,Dead,Mucormycosis,Diabetes Mellitus ,Dexamethasone then Methylprednisolone and Methylprednisolone and Amphotericin B
+Peru ,66,Female,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Isavuconazole
+India,56,Female,Live,Mucormycosis,Without Medical History,Without Steroids and Posaconazole and Amphotericin B
+India,69,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole
+India,73,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+Iran,35,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+Iran,40,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole
+India,41,Male,Live,Mucormycosis,Diabetes Mellitus ,Methylprednisolone and AmBisome
+India,54,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Isavuconazole and Posaconazole
+India,57,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+USA ,68,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B and Posaconazole
+Japan ,58,Male,Dead,R. oryzae,Hypertension,Without Steroids and Without Antifungal agents
+India,61,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and Amphotericin B
+India,56,Male,Dead,Mucormycosis,Without Medical History,Without Steroids and Posaconazole and AmBisome
+USA ,61,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Dexamethasone and Amphotericin B and Itraconazole
+Brazil,39,Female,Live,Mucormycosis,Without Medical History,Without Steroids and Voriconazole and AmBisome and Isavuconazole
+Brazil,56,Male,Dead,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B
+India,56,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole
+India,74,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone then Methylprednisolone and Methylprednisolone and Amphotericin B
+Netherland,67,Male,Dead,R. microsporus,Diabetes Mellitus ,Dexamethasone and Voriconazole and Isavuconazole and AmBisome
+India,55,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+India,57,Male,Live,R. homothallicus and R. Microsporus,Diabetes Mellitus and Hypertension,Without Steroids and AmBisome
+India,59,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole
+India,60,Male,Dead,R. arrhizus,Diabetes Mellitus and Chronic Liver Disease,Without Steroids and AmBisome
+India,62,Male,Live,R. arrhizus,Diabetes Mellitus and Hypertension and Coronary Artery Disease,Without Steroids and AmBisome
+UK,68,Male,Dead,Aspergillus spp. and Rhizopus spp.,Diabetes Mellitus and Chronic Kidney Disease,Corticosteroids and AmBisome and Posaconazole and Isavuconazole
+Egypt,29,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Egypt,35,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Egypt,76,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Egypt,77,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+India,50,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+India,50,Male,Live,Mucormycosis,Diabetes Mellitus ,Methylprednisolone and AmBisome and Isavuconazole and Posaconazole
+India,54,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+India,54,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and Amphotericin B
+India,58,Female,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and AmBisome
+India,58,Female,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and AmBisome and Isavuconazole and Posaconazole
+India,59,Male,Live,Mucormycosis,Diabetes Mellitus ,Methylprednisolone and AmBisome
+India,59,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole
+India,65,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and AmBisome
+India,65,Female,Dead,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+India,65,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and AmBisome and Isavuconazole and Posaconazole
+India,65,Female,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and Without Antifungal agents
+India,69,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+India,69,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Isavuconazole and Posaconazole
+India,72,Female,Live,Mucormycosis,Diabetes Mellitus ,Methylprednisolone and AmBisome
+India,72,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Isavuconazole and Posaconazole
+India,32,Male,Live,Mucormycosis,Without Medical History,Without Steroids and AmBisome and Isavuconazole
+Denmark,50,Male,Dead,Aspergillus spp. and R. microsporus                                                    ,Chronic Kidney Disease and Polymorph Post Transplantation Lymphoproliferative Disease and Short Bowel Syndrome,Dexamethasone and Voriconazole and Isavuconazole and Amphotericin B and Fluconazole and AmBisome
+India,64,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+India,48,Male,Live,R. microsporus,Without Medical History,Without Steroids and Amphotericin B
+Iran,51,Male,Live,Mucormycosis,Without Medical History,Without Steroids and Amphotericin B and Caspofungin
+USA ,44,Female,Dead,Mucormycosis,Diabetes Mellitus ,Methylprednisolone and Voriconazole and Micafungin and AmBisome
+India,27,Male,Dead,Mucormycosis,Without Medical History,Without Steroids and AmBisome
+India,63,Male,Live,Rhizopus spp.,Diabetes Mellitus ,Without Steroids and AmBisome
+India,36,Male,Live,Mucormycosis,Without Medical History,Without Steroids and Amphotericin B and Posaconazole
+Pakistan,48,Female,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Dexamethasone and Amphotericin B
+USA,75,Male,Live,Mucormycosis,Diabetes Mellitus ,Dexamethasone and AmBisome and Isavuconazole
+India,34,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Posaconazole
+India,39,Male,Live,Mucormycosis,Without Medical History,Without Steroids and AmBisome
+India,50,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole
+India,62,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and Without Antifungal agents
+India ,39,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Iran,50,Female,Live,R. arrhizus,Diabetes Mellitus and Hypertension,Without Steroids and AmBisome
+India,11,Male,Live,R. arrhizus,Diabetes Mellitus ,Without Steroids and AmBisome
+India,13,Female,Live,R. arrhizus,Diabetes Mellitus ,Without Steroids and AmBisome
+Iran,59,Male,Dead,R. oryzae,Without Medical History,Methylprednisolone and AmBisome
+Peru,56,Male,Live,Mucormycosis,Without Medical History,Without Steroids and AmBisome and Isavuconazole
+India,32,Male,Dead,R. oryzae,Diabetes Mellitus ,Without Steroids and AmBisome
+India,53,Female,Live,Rhizopus spp.,Diabetes Mellitus ,Without Steroids and AmBisome
+Egypt,80,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension and Chronic Kidney Disease,Without Steroids and Amphotericin B
+India,45,Female,Live,Rhizopus spp.,Diabetes Mellitus ,Without Steroids and Amphotericin B
+India,66,Male,Live,Mucormycosis,Without Medical History,Without Steroids and Posaconazole
+India,59,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+India,21,Female,Live,R. homothallicus.,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+France,74,Male,Dead,Aspergillus spp. and Rhizopus spp.,Diabetes Mellitus ,Dexamethasone and Voriconazole and Amphotericin B and Isavuconazole and Micafungin and Caspofungin
+Germany,30,Female,Live,Mucormycosis,Without Medical History,Without Steroids and AmBisome
+Mexico,50,Male,Dead,L. corymbifera,Without Medical History,Dexamethasone and Isavuconazole and Amphotericin B
+Mexico,62,Female,Dead,R. microsporus,Diabetes Mellitus ,Without Steroids and Amphotericin B and Posaconazole
+France,55,Male,Dead,Aspergillus spp. and R. microsporus                                                    ,Cancer,Without Steroids and AmBisome
+India,48,Male,Live,Mucormycosis,Without Medical History,Methylprednisolone and AmBisome and Posaconazole
+Iran,61,Female,Live,Mucormycosis,Without Medical History,Without Steroids and Without Antifungal agents
+USA ,94,Male,Live,R. oryzae,Hypertension,Without Steroids and Micafungin
+India,57,Female,Dead,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole
+India,35,Male,Live,Mucormycosis,Down syndrome,Without Steroids and AmBisome and Posaconazole
+India,39,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole and Iatroconazole
+India,55,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B
+India,68,Female,Dead,Mucormycosis,Diabetes Mellitus and Hypertension and Chronic Kidney Disease,Without Steroids and Without Antifungal agents
+India ,29,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+India ,56,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B
+Spain ,48,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Spain ,48,Male,Live,L. ramose,Hypertension,Methylprednisolone and AmBisome and Isavuconazole
+Spain ,62,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Spain ,62,Male,Live,R. oryzae,Diabetes Mellitus and Hypertension and Chronic Kidney Disease,Dexamethasone and AmBisome and Isavuconazole and Posaconazole
+Netherland,50,Male,Dead,A. fumigatus and L. ramosa,Without Medical History,Without Steroids and Voriconazole and AmBisome
+Netherland,65,Male,Live,R. microsporus,Without Medical History,Without Steroids and AmBisome and Posaconazole
+Netherland,69,Male,Dead,Aspergillus spp. and R. microsporus                                                    ,Chronic Lymphocytic Leukaemia,Dexamethasone and Isavuconazole and AmBisome and Micafungin and Isavuconazole
+Netherland,70,Male,Dead,R. arrhizus,Diabetes Mellitus ,Without Steroids and Isavuconazole and AmBisome
+Netherlands,50,Male,Dead,Mucormycosis,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+Netherlands,60,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Netherlands,60,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Egypt,41,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+Egypt,54,Male,Dead,Mucormycosis,Without Medical History,Without Steroids and Without Antifungal agents
+Egypt,55,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Egypt,61,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Egypt,63,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Without Antifungal agents
+Egypt,65,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Egypt,65,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Amphotericin B and Itraconazole
+Egypt,67,Male,Dead,Mucormycosis,Diabetes Mellitus and Chronic Kidney Disease,Without Steroids and Amphotericin B
+UK,22,Male,Dead,Mucormycosis,Hypothyroidism,Without Steroids and Without Antifungal agents
+Egypt,59,Female,Dead,Mucormycosis,Diabetes Mellitus ,Without Steroids and AmBisome
+Egypt,59,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension,Without Steroids and Amphotericin B
+Egypt,69,Male,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Fluconazole
+Egypt,71,Male,Live,Mucormycosis,Diabetes Mellitus ,Methylprednisolone and Amphotericin B
+Egypt,73,Male,Live,Mucormycosis,Diabetes Mellitus and Hypertension and Ischemic Heart Disease,Without Steroids and AmBisome
+India,52,Male,Live,R. arrhizus,Diabetes Mellitus ,Without Steroids and AmBisome and Posaconazole
+India,59,Female,Dead,Rhizopus spp.,Diabetes Mellitus and Hypertension,Without Steroids and AmBisome
+India,62,Female,Live,Rhizopus spp.,Diabetes Mellitus and Hypertension,Without Steroids and AmBisome
+India,68,Female,Dead,R. arrhizus,Diabetes Mellitus ,Without Steroids and AmBisome
+India,70,Female,Live,R. arrhizus,Diabetes Mellitus ,Without Steroids and AmBisome
+USA,41,Female,Dead,Rhizopus spp.,Diabetes Mellitus ,Without Steroids and Voriconazole and Posaconazole
+USA ,79,Male,Live,A. fumigatus and R. arrhizus,Diabetes Mellitus and Hypertension,Without Steroids and Voriconazole and AmBisome
+USA,68,Male,Dead,R. microsporus,Diabetes Mellitus and Solid Organ Transpant,Methylprednisolone and AmBisome and Posaconazole
+Iran,44,Female,Live,R. oryzae,Without Medical History,Dexamethasone and AmBisome and Posaconazole
+USA ,60,Female,Live,Mucormycosis,Diabetes Mellitus ,Without Steroids and Voriconazole and Isavuconazole and Posaconazole
+India,55,Male,Live,R. microsporus,Diabetes Mellitus and Hypertension and Ischemic Heart Disease,Without Steroids and Amphotericin B and Itraconazole and Posaconazole
+Italy,66,Male,Dead,C. glabrata and Rhizopus spp.,Hypertension,Without Steroids and AmBisome and Isavuconazole
+Brazil,86,Male,Dead,Mucormycosis,Hypertension,Without Steroids and Without Antifungal agents
+India,60,Male,Dead,Mucormycosis,Diabetes Mellitus ,Dexamethasone then Methylprednisolone and Without Antifungal agents
+USA ,49,Male,Dead,Rhizopus spp.,Without Medical History,Without Steroids and Amphotericin B
+USA ,33,Female,Dead,Mucormycosis,Hypertension and Asthma ,Without Steroids and Amphotericin B
