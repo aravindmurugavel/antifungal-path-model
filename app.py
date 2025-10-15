@@ -221,37 +221,86 @@ patient_input = {}
 raw_inputs = {} # Dictionary to store raw (string) inputs
 
 # ===========================
+# ===========================
 # Inputs
 # ===========================
 left, right = st.columns([1, 1])
 
+# A robust helper function to apply binomial nomenclature to all species, even complex strings.
+def format_species_name(name):
+    
+    # This inner function formats a *single* species name correctly.
+    def format_single_species(s):
+        s = s.strip()
+        s_lower = s.lower()
+        
+        # Terms that must be converted to "Mucor spp." (case-insensitive and accounting for misspellings)
+        MUCOR_TERMS = ['mucomycosis', 'mucormycosis', 'mucorales spp.']
+        
+        # --- START OF CORRECTION: Handle all required mandatory renames first (case-insensitive exact match) ---
+        if s_lower in MUCOR_TERMS:
+            return "Mucor spp."
+        # --- END OF CORRECTION ---
+        
+        # Handles abbreviated binomial nomenclature (e.g., C. albicans, R. microsporus)
+        if '.' in s:
+            parts = s.split('.', 1)
+            # Genus initial (C/R) must be capitalized
+            genus = parts[0].strip().capitalize()
+            # Species name (albicans/microsporus) must be lowercase
+            species = parts[1].strip().lower() 
+            return f"{genus}. {species}"
+        
+        # Handles full binomial nomenclature (e.g., Candida albicans, Rhizopus microsporus)
+        elif ' ' in s:
+            parts = s.split(' ', 1)
+            # Genus name (Candida/Rhizopus) must be capitalized
+            genus = parts[0].strip().capitalize()
+            # Species name (albicans/microsporus) must be lowercase
+            species = parts[1].strip().lower() 
+            return f"{genus} {species}"
+        
+        # Fallback for single-word/spp names (e.g., Aspergillus spp., Candida spp.)
+        else:
+            return s.capitalize()
+
+    # Split by ' and ' to handle combined cases (e.g., Aspergillus spp. and Mucomycosis)
+    if ' and ' in name.lower():
+        # Split using the most common case-insensitive separator
+        parts = name.lower().split(' and ')
+        
+        # Apply the formatting to each species name in the list
+        formatted_parts = [format_single_species(part) for part in parts]
+        
+        # Join them back together with ' and '
+        return ' and '.join(formatted_parts)
+    else:
+        # If there's no "and", just format the single name.
+        return format_single_species(name)
 with left:
     st.markdown("#### Patient Profile")
 
     # 1. Age group (custom display logic)
     age_options = list(encoders["Age_Group"].classes_)
     age_choice = st.selectbox("Age Group", age_options, help="Age categories used by the model")
-    
+
     # Capture raw input for summary
-    age_group_raw = age_choice 
-    
+    age_group_raw = age_choice
+
     if (hint := age_group_hint().get(age_choice)):
         st.caption(f"Hint: {hint}")
     patient_input["Age_Group"] = int(encoders["Age_Group"].transform([age_choice])[0])
 
-# 2. Other Patient Profile Features
+    # 2. Other Patient Profile Features
     for feature in PATIENT_PROFILE_FEATURES:
         options = list(encoders[feature].classes_)
-        
+
         # --- START OF FIX: Rename and deduplicate 'Country' options ---
         if feature == "Country":
-            # 1. Rename 'Austria' to 'Australia' in the options list for display
             options = ['Australia' if opt == 'Austria' else opt for opt in options]
-            
-            # 2. Use a set to remove the duplicate 'Australia' entry
-            options = sorted(list(set(options))) 
+            options = sorted(list(set(options)))
         # --- END OF FIX ---
-            
+
         choice = st.selectbox(feature, options)
         raw_inputs[feature] = choice # Capture raw input
         patient_input[feature] = int(encoders[feature].transform([choice])[0])
@@ -262,23 +311,50 @@ with left:
     outcome_raw = "Live" # Capture raw outcome
     # -------------------------------------------
 
-    st.markdown('</div>', unsafe_allow_html=True)
-
 with right:
     st.markdown("#### Clinical Context")
-    st.markdown(
-        '<div class="help-note"</div>',
-        unsafe_allow_html=True
-    )
     
     # Clinical Context Features
     for feature in CLINICAL_CONTEXT_FEATURES:
-        options = list(encoders[feature].classes_)
-        choice = st.selectbox(feature, options)
-        raw_inputs[feature] = choice # Capture raw input
-        patient_input[feature] = int(encoders[feature].transform([choice])[0])
-        
-    st.markdown('</div>', unsafe_allow_html=True)
+        options = sorted(list(encoders[feature].classes_)) # Sort options alphabetically
+
+# Check if the current feature is "Species" to apply special formatting and filtering
+        if feature == "Species":
+            # --- START OF MODIFICATIONS FOR SPECIES ---
+            # 1. Rename 'Mucormycosis' to 'Mucor spp.' for display
+            options_display = ['Mucor spp.' if opt == 'Mucormycosis' else opt for opt in options]
+            
+            # 2. Remove "A. baumannii" from the options list
+            options_display = [opt for opt in options_display if "baumannii" not in opt.lower()]
+            
+            # 3. Handle mapping back to original label encoder value for model prediction
+            # The label encoder in 'encoders["Species"]' still contains the original names. 
+            # We map 'Mucor spp.' (display) back to 'Mucormycosis' (model label) before encoding.
+            display_to_model = {
+                'Mucor spp.': 'Mucormycosis',
+                **{opt: opt for opt in options_display if opt != 'Mucor spp.'}
+            }
+            # --- END OF MODIFICATIONS FOR SPECIES ---
+
+            choice_display = st.selectbox(
+                feature,
+                options_display, # Use the modified list
+                format_func=format_species_name  # Apply our robust formatting function
+            )
+            
+            # Get the original label for the model
+            choice_model = display_to_model.get(choice_display, choice_display)
+            raw_inputs[feature] = choice_display # Capture raw input (display name)
+            
+            # Encode the original label for the model
+            patient_input[feature] = int(encoders[feature].transform([choice_model])[0])
+
+        else:
+            # Create the selectbox normally for other features (like Medical History)
+            choice = st.selectbox(feature, options)
+            raw_inputs[feature] = choice # Capture raw input
+            patient_input[feature] = int(encoders[feature].transform([choice])[0])
+
 
 # Map captured raw inputs for use in the summary section
 age_group = age_group_raw
@@ -291,7 +367,6 @@ target_drugs = target # The list of all therapy options from loaded artifact
 
 # Ensure DataFrame follows model feature order
 df = pd.DataFrame([patient_input])[features]
-
 # ===========================
 # Predict Section
 # ===========================
