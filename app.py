@@ -12,7 +12,10 @@ Unified Streamlit app that:
 - Confidence heading text colors are explicitly set to match their pill colors.
 - Main background color changed to white (#ffffff).
 - Result box (prob-row) background color now changes based on confidence level.
-- **Includes Plotly Visualization and Treatment Summary sections.**
+- Includes Plotly Visualization and Treatment Summary sections.
+- MODIFIED: Age input is now numerical.
+- MODIFIED: Prediction results are segregated by drug class.
+- MODIFIED: Antifungal drugs are sub-classified.
 """
 
 import os
@@ -90,6 +93,28 @@ st.markdown(
 
     .help-note { color: var(--muted); font-size: 0.92rem; }
     .footer-note { color: var(--muted); font-size: 0.88rem; margin-top: 10px; }
+    
+    /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+    EDIT THIS SECTION TO CHANGE THE SEPARATOR LINE
+    vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+    */
+    h6 {
+        font-weight: 600;
+        color: var(--muted);
+        margin-top: 14px;
+        margin-bottom: 18px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #e5e7eb;
+        /* EXAMPLE FOR CENTERING:
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        */
+    }
+    /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    END OF EDITING SECTION
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    */
     </style>
     """,
     unsafe_allow_html=True
@@ -198,6 +223,17 @@ def age_group_hint():
         "middle-aged": "40–64 years",
         "senior adult": "65+ years",
     }
+    
+# NEW: Helper to map numerical age to a model category
+def map_age_to_group(age):
+    """Maps a numerical age to its corresponding string category."""
+    if age <= 2: return "infant"
+    if age <= 4: return "toddler"
+    if age <= 12: return "child"
+    if age <= 19: return "teen"
+    if age <= 39: return "adult"
+    if age <= 64: return "middle-aged"
+    return "senior adult" # 65+
 
 def get_age_group_description(group):
     # Helper to get the descriptive age range for the summary
@@ -211,7 +247,7 @@ def badge(prob):
     if prob >= 0.30:
         return f'<span class="pill pill-mid">{pct(prob)}</span>'
     return f'<span class="pill pill-low">{pct(prob)}</span>'
-# NEW: Helper function to capitalize the first letter of the age group name for display
+
 def format_age_group(name):
     return name.capitalize()
     
@@ -282,20 +318,21 @@ def format_species_name(name):
         return format_single_species(name)
         
 with left:
-    st.markdown("#### Patient Profile")
+    st.markdown("#### 🩺 Patient Profile")
 
-    # 1. Age group (custom display logic)
-    age_options = list(encoders["Age_Group"].classes_)
-    # ADD format_func to capitalize the first letter for display
-    age_choice = st.selectbox("Age Group", age_options, help="Age categories used by the model", format_func=format_age_group)
-
-    # Capture raw input for summary
+    # 1. Age (numerical input) - MODIFIED
+    age_numerical = st.number_input(
+        "Age (in years)", 
+        min_value=0, 
+        max_value=120, 
+        value=35, 
+        step=1, 
+        help="Enter the patient's age in years."
+    )
+    # Map numerical age to the categorical group required by the model
+    age_choice = map_age_to_group(age_numerical)
+    # Store the mapped group name for the summary display
     age_group_raw = age_choice
-    # Capture raw input for summary
-    age_group_raw = age_choice
-
-    if (hint := age_group_hint().get(age_choice)):
-        st.caption(f"Hint: {hint}")
     patient_input["Age_Group"] = int(encoders["Age_Group"].transform([age_choice])[0])
 
     # 2. Other Patient Profile Features
@@ -319,13 +356,13 @@ with left:
     # -------------------------------------------
 
 with right:
-    st.markdown("#### Clinical Context")
+    st.markdown("#### 🔬 Clinical Context")
     
     # Clinical Context Features
     for feature in CLINICAL_CONTEXT_FEATURES:
         options = sorted(list(encoders[feature].classes_)) # Sort options alphabetically
 
-# Check if the current feature is "Species" to apply special formatting and filtering
+        # Check if the current feature is "Species" to apply special formatting and filtering
         if feature == "Species":
             # --- START OF MODIFICATIONS FOR SPECIES ---
             # 1. Rename 'Mucormycosis' to 'Mucor spp.' for display
@@ -335,8 +372,6 @@ with right:
             options_display = [opt for opt in options_display if "baumannii" not in opt.lower()]
             
             # 3. Handle mapping back to original label encoder value for model prediction
-            # The label encoder in 'encoders["Species"]' still contains the original names. 
-            # We map 'Mucor spp.' (display) back to 'Mucormycosis' (model label) before encoding.
             display_to_model = {
                 'Mucor spp.': 'Mucormycosis',
                 **{opt: opt for opt in options_display if opt != 'Mucor spp.'}
@@ -370,17 +405,70 @@ country = raw_inputs.get("Country", "N/A")
 species = raw_inputs.get("Species", "N/A")
 medical_history = raw_inputs.get("Medical History", "N/A")
 outcome = outcome_raw
-target_drugs = target # The list of all therapy options from loaded artifact
+target_drugs = target
 
 # Ensure DataFrame follows model feature order
 df = pd.DataFrame([patient_input])[features]
 # ===========================
 # Predict Section
 # ===========================
+
+# NEW: Drug classification for segregated results - MODIFIED
+DRUG_CLASSIFICATION = {
+    # Azoles
+    'Voriconazole': 'Azoles', 'Posaconazole': 'Azoles', 'Isavuconazole': 'Azoles',
+    'Itraconazole': 'Azoles', 'Fluconazole': 'Azoles',
+    # Polyenes
+    'Amphotericin B Deoxycholate': 'Polyenes', 'Liposomal Amphotericin B': 'Polyenes',
+    'Amphotericin B lipid complex': 'Polyenes', 'AmBisome': 'Polyenes', 'Amphotericin B': 'Polyenes',
+    # Echinocandins
+    'Anidulafungin': 'Echinocandins', 'Caspofungin': 'Echinocandins', 'Micafungin': 'Echinocandins',
+    # Steroids
+    'Prednisolone': 'Steroids', 'Dexamethasone': 'Steroids', 'Methylprednisolone': 'Steroids',
+    'Corticosteroids': 'Steroids', 'Steroid': 'Steroids',
+    # Combination Therapies
+    'Voriconazole + Anidulafungin': 'Combination Therapies', 'Amphotericin B + Flucytosine': 'Combination Therapies'
+}
+CLASS_ORDER = ['Azoles', 'Polyenes', 'Echinocandins', 'Steroids', 'Combination Therapies', 'Other']
+
+def get_drug_class(drug_name):
+    """Returns the class of a given drug, defaulting to 'Other'."""
+    return DRUG_CLASSIFICATION.get(drug_name, 'Other')
+
+def display_results_by_class(confidence_list, confidence_level):
+    """
+    Displays prediction results segregated by drug class.
+    Args:
+        confidence_list (list): List of (drug, probability) tuples.
+        confidence_level (str): 'high', 'mid', or 'low' for styling.
+    """
+    if not confidence_list:
+        st.caption("No items in this band for the current profile.")
+        return
+
+    # Group drugs by class
+    grouped_by_class = {}
+    for tname, p in confidence_list:
+        d_class = get_drug_class(tname)
+        if d_class not in grouped_by_class:
+            grouped_by_class[d_class] = []
+        grouped_by_class[d_class].append((tname, p))
+
+    # Display grouped results
+    for d_class in CLASS_ORDER:
+        if d_class in grouped_by_class:
+            st.markdown(f"<h6>{d_class}</h6>", unsafe_allow_html=True)
+            for tname, p in grouped_by_class[d_class]:
+                st.markdown(
+                    f'<div class="prob-row prob-row-{confidence_level}"><div class="prob-name">{tname}</div>'
+                    f'<div class="prob-pct">{badge(p)}</div></div>',
+                    unsafe_allow_html=True
+                )
+
 # The button itself is placed outside the result display logic
-if st.button("Predict Antifungal Treatment", type="primary"):
+if st.button(" ⚕ Predict Antifungal Treatment", type="primary"):
     
-    st.markdown("### Recommended Therapies for Survival")
+    st.markdown("### Recommended Therapies for Treatment Success")
 
     try:
         # Your original prediction logic
@@ -395,7 +483,6 @@ if st.button("Predict Antifungal Treatment", type="primary"):
                 prob = 0.0
             probability_dict[target[i]] = prob
     except Exception as e:
-        # Since the demo/fallback is removed, we raise a specific error for the model API 
         st.error(f"Prediction Error: The model's predict_proba or estimators_ structure is incompatible. Original Error: {e}")
         st.stop()
 
@@ -408,44 +495,18 @@ if st.button("Predict Antifungal Treatment", type="primary"):
 
     colA, colB, colC = st.columns([1, 1, 1])
 
+    # MODIFIED: Display results segregated by drug class
     with colA:
         st.markdown('<div class="section-title title-high">High Confidence (≥70%)</div>', unsafe_allow_html=True)
-        if not high_conf:
-            st.caption("No items in this band for the current profile.")
-        for tname, p in high_conf:
-            # Applying the new high-confidence style
-            st.markdown(
-                f'<div class="prob-row prob-row-high"><div class="prob-name">{tname}</div>'
-                f'<div class="prob-pct">{badge(p)}</div></div>',
-                unsafe_allow_html=True
-            )
-        st.markdown('</div>', unsafe_allow_html=True)
+        display_results_by_class(high_conf, 'high')
 
     with colB:
         st.markdown('<div class="section-title title-mid">Moderate Confidence (30–70%)</div>', unsafe_allow_html=True)
-        if not moderate_conf:
-            st.caption("No items in this band for the current profile.")
-        for tname, p in moderate_conf:
-            # Applying the new moderate-confidence style
-            st.markdown(
-                f'<div class="prob-row prob-row-mid"><div class="prob-name">{tname}</div>'
-                f'<div class="prob-pct">{badge(p)}</div></div>',
-                unsafe_allow_html=True
-            )
-        st.markdown('</div>', unsafe_allow_html=True)
+        display_results_by_class(moderate_conf, 'mid')
 
     with colC:
         st.markdown('<div class="section-title title-low">Low Confidence (<30%)</div>', unsafe_allow_html=True)
-        if not low_conf:
-            st.caption("No items in this band for the current profile.")
-        for tname, p in low_conf:
-            # Applying the new low-confidence style
-            st.markdown(
-                f'<div class="prob-row prob-row-low"><div class="prob-name">{tname}</div>'
-                f'<div class="prob-pct">{badge(p)}</div></div>',
-                unsafe_allow_html=True
-            )
-        st.markdown('</div>', unsafe_allow_html=True)
+        display_results_by_class(low_conf, 'low')
 
     st.markdown(
         '<div class="footer-note">'
@@ -497,14 +558,14 @@ if st.button("Predict Antifungal Treatment", type="primary"):
     
     with col1_sum:
         st.markdown("#### Patient Profile Summary")
-        st.write(f"**Age Group:** {age_group.replace('_', ' ').title()} ({get_age_group_description(age_group)})")
+        # MODIFIED: Display numerical age and the mapped group
+        st.write(f"**Age:** {age_numerical} years ({age_group.replace('_', ' ').title()})")
         st.write(f"**Gender:** {gender}")
         st.write(f"**Country:** {country}")
         st.write(f"**Fungal Species:** {species}")
         st.write(f"**Medical History:** {medical_history}")
         st.write(f"**Expected Outcome:** {outcome}")
         
-        # Simplified Model Performance section (since model is guaranteed to load or app stops)
         st.markdown("#### Model Performance")
         st.success("Model Accuracy: 92%")
         st.info(f"Predictions based on {len(target_drugs)} treatment options")
@@ -514,7 +575,6 @@ if st.button("Predict Antifungal Treatment", type="primary"):
         top_3 = sorted_probs[:3] # Using sorted_probs
         for i, (drug, prob) in enumerate(top_3, 1):
             confidence_level = "High" if prob > 0.7 else "Medium" if prob > 0.3 else "Low"
-            # Using custom CSS classes for colored text
             confidence_color_class = "title-high" if prob > 0.7 else "title-mid" if prob > 0.3 else "title-low"
             
             st.markdown(f"**{i}. {drug}**", unsafe_allow_html=True)
@@ -558,5 +618,11 @@ with st.expander("ℹ️ About this Application"):
     - International surveillance data
     - Peer-reviewed clinical literature
     
-    **Developed by:** SASTRA University & CRID Research Team | **Last Updated:** October 2025
+    ### Developed by:
+    - Actinomyces Biopropecting Lab 
+    - Prof. R. Jayapradha
+    - Mr. Aravind M
+    - Ms. P.D.L. Sahithi
+    - Ms. Sridevi Raghunathan
+    - SASTRA University & CRID Research Team
     """)
