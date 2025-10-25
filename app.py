@@ -16,6 +16,11 @@ Unified Streamlit app that:
 - MODIFIED: Age input is now numerical.
 - MODIFIED: Prediction results are segregated by drug class.
 - MODIFIED: Antifungal drugs are sub-classified.
+- MODIFIED: Removed "Without Antifungal agents" from prediction output.
+- NEW: Added "Potential Combination Therapies" generation and display.
+- MODIFIED: Combination therapy display now shows sum of probabilities.
+- MODIFIED: Removed border from h6 (drug class) titles.
+- MODIFIED: Renamed drug class titles (e.g., "Azoles" to "Azoles class of drugs").
 """
 
 import os
@@ -104,7 +109,7 @@ st.markdown(
         margin-top: 14px;
         margin-bottom: 18px;
         padding-bottom: 5px;
-        border-bottom: 1px solid #e5e7eb;
+        /* border-bottom: 1px solid #e5e7eb; <-- REMOVED THIS LINE */ 
         /* EXAMPLE FOR CENTERING:
         width: 100%;
         margin-left: auto;
@@ -251,6 +256,43 @@ def badge(prob):
 def format_age_group(name):
     return name.capitalize()
     
+# NEW: Helper to display generated combinations
+def display_combinations(combo_list):
+    """
+    Displays generated combination therapies in a styled row.
+    Args:
+        combo_list (list): List of (drug1, prob1, drug2, prob2) tuples.
+    """
+    if not combo_list:
+        st.caption("No combinations meet the criteria.")
+        return
+    
+    for d1, p1, d2, p2 in combo_list:
+        # Determine style based on the *minimum* probability
+        min_prob = min(p1, p2)
+        if min_prob >= 0.70:
+            style_level = 'high'
+        else:
+            style_level = 'mid' # All candidates are > 0.40, so 'mid' is the lowest
+        
+        # MODIFIED: Show individual percentages in the name
+        name_html = f'<div class="prob-name" style="font-size: 0.9rem;">{d1} ({pct(p1)}) + {d2} ({pct(p2)})</div>'
+        
+        # NEW: Calculate sum
+        total_prob = p1 + p2
+        # Cap at 100%
+        if total_prob > 1.0:
+            total_prob = 1.0
+            
+        # MODIFIED: Show sum as "survival"
+        pct_html = f'<div class="prob-pct" style="font-weight: 600; font-size: 0.9rem; white-space: nowrap;">= {pct(total_prob)} Survival</div>'
+        
+        st.markdown(
+            # Added style to allow wrapping and align items center
+            f'<div class="prob-row prob-row-{style_level}" style="flex-wrap: wrap; align-items: center;">{name_html}{pct_html}</div>',
+            unsafe_allow_html=True
+        )
+
 # ===========================
 # Input Grouping Definition
 # ===========================
@@ -454,10 +496,21 @@ def display_results_by_class(confidence_list, confidence_level):
             grouped_by_class[d_class] = []
         grouped_by_class[d_class].append((tname, p))
 
+    # NEW: Title mapping
+    title_mapping = {
+        "Azoles": "Azoles class of drugs",
+        "Polyenes": "Polyenes class of drugs",
+        "Echinocandins": "Echinocandins class of drugs",
+        "Steroids": "Steroids" # Added for consistency
+    }
+
     # Display grouped results
     for d_class in CLASS_ORDER:
         if d_class in grouped_by_class:
-            st.markdown(f"<h6>{d_class}</h6>", unsafe_allow_html=True)
+            # Use mapped title or default
+            display_title = title_mapping.get(d_class, d_class)
+            st.markdown(f"<h6>{display_title}</h6>", unsafe_allow_html=True)
+            
             for tname, p in grouped_by_class[d_class]:
                 st.markdown(
                     f'<div class="prob-row prob-row-{confidence_level}"><div class="prob-name">{tname}</div>'
@@ -468,7 +521,7 @@ def display_results_by_class(confidence_list, confidence_level):
 # The button itself is placed outside the result display logic
 if st.button(" ⚕ Predict Antifungal Treatment", type="primary"):
     
-    st.markdown("### Recommended Therapies for Treatment Success")
+    st.markdown("### Recommended Therapies for Treatment Success 💊")
 
     try:
         # Your original prediction logic
@@ -482,16 +535,72 @@ if st.button(" ⚕ Predict Antifungal Treatment", type="primary"):
             else:
                 prob = 0.0
             probability_dict[target[i]] = prob
+        
+        # <<< --- START: Remove "Without Antifungal agents" per user request --- >>>
+        # Check for both capitalizations as requested
+        if "Without Antifungal agents" in probability_dict:
+            del probability_dict["Without Antifungal agents"]
+        if "Without antifungal agents" in probability_dict:
+            del probability_dict["Without antifungal agents"]
+        # <<< --- END: Removal --- >>>
+            
     except Exception as e:
         st.error(f"Prediction Error: The model's predict_proba or estimators_ structure is incompatible. Original Error: {e}")
         st.stop()
 
 
-    # Sort and group
+    # Sort and group (now without the removed item)
     sorted_probs = sorted(probability_dict.items(), key=lambda x: x[1], reverse=True)
     high_conf = [(t, p) for t, p in sorted_probs if p >= 0.70]
     moderate_conf = [(t, p) for t, p in sorted_probs if 0.30 <= p < 0.70]
     low_conf = [(t, p) for t, p in sorted_probs if p < 0.30]
+
+    # <<< --- START: Combination Therapy Generation --- >>>
+    # 1. Get all candidates with prob > 40%
+    candidates = [(drug, prob) for drug, prob in sorted_probs if prob > 0.40]
+
+    # 2. Classify candidates
+    antifungal_candidates = []
+    steroid_candidates = []
+    without_steroids_tuple = None # Will store the (drug_name, prob) tuple if found
+    
+    # Define antifungal classes based on existing DRUG_CLASSIFICATION
+    antifungal_classes = ['Azoles', 'Polyenes', 'Echinocandins']
+
+    for drug, prob in candidates:
+        # Check for "Without Steroids" case-insensitively
+        if drug.lower() == "without steroids":
+            without_steroids_tuple = (drug, prob)
+        else:
+            d_class = get_drug_class(drug) # Use existing helper
+            if d_class in antifungal_classes:
+                antifungal_candidates.append((drug, prob))
+            elif d_class == 'Steroids':
+                steroid_candidates.append((drug, prob))
+
+    # 3. Generate combination lists
+    
+    # Category 1: Antifungal + Antifungal
+    combo_af_af = []
+    for i in range(len(antifungal_candidates)):
+        for j in range(i + 1, len(antifungal_candidates)):
+            drug1, prob1 = antifungal_candidates[i]
+            drug2, prob2 = antifungal_candidates[j]
+            combo_af_af.append((drug1, prob1, drug2, prob2))
+            
+    # Category 2: Antifungal + Steroid
+    combo_af_steroid = []
+    for drug_af, prob_af in antifungal_candidates:
+        for drug_st, prob_st in steroid_candidates:
+            combo_af_steroid.append((drug_af, prob_af, drug_st, prob_st))
+
+    # Category 3: Antifungal + "Without Steroids"
+    combo_af_no_steroid = []
+    if without_steroids_tuple:
+        drug_ws, prob_ws = without_steroids_tuple
+        for drug_af, prob_af in antifungal_candidates:
+            combo_af_no_steroid.append((drug_af, prob_af, drug_ws, prob_ws))
+    # <<< --- END: Combination Therapy Generation --- >>>
 
     colA, colB, colC = st.columns([1, 1, 1])
 
@@ -514,6 +623,25 @@ if st.button(" ⚕ Predict Antifungal Treatment", type="primary"):
         '</div>',
         unsafe_allow_html=True
     )
+
+    # <<< --- START: Display Combination Therapies --- >>>
+    st.markdown("---") # Add a separator
+    st.markdown("### Potential Combination Therapies")
+
+    colD, colE, colF = st.columns([1, 1, 1])
+    
+    with colD:
+        st.markdown('<div class="section-title title-mid">Antifungal + Antifungal</div>', unsafe_allow_html=True)
+        display_combinations(combo_af_af)
+
+    with colE:
+        st.markdown('<div class="section-title title-mid">Antifungal + Steroid</div>', unsafe_allow_html=True)
+        display_combinations(combo_af_steroid)
+
+    with colF:
+        st.markdown('<div class="section-title title-mid">Antifungal + Without Steroids</div>', unsafe_allow_html=True)
+        display_combinations(combo_af_no_steroid)
+    # <<< --- END: Display Combination Therapies --- >>>
 
     # ===========================
     # Visualization
@@ -568,7 +696,7 @@ if st.button(" ⚕ Predict Antifungal Treatment", type="primary"):
         
         st.markdown("#### Model Performance")
         st.success("Model Accuracy: 92%")
-        st.info(f"Predictions based on {len(target_drugs)} treatment options")
+        st.info(f"Predictions based on {len(target_drugs)-1} treatment options") # Adjusted count
     
     with col2_sum:
         st.markdown("#### Top 3 Treatment Recommendations")
@@ -619,10 +747,8 @@ with st.expander("ℹ️ About this Application"):
     - Peer-reviewed clinical literature
     
     ### Developed by:
-    - Actinomyces Biopropecting Lab 
-    - Prof. R. Jayapradha
-    - Mr. Aravind M
-    - Ms. P.D.L. Sahithi
-    - Ms. Sridevi Raghunathan
-    - SASTRA University & CRID Research Team
+    - Prof. R. Jayapradha | Mr. Aravind M | Ms. P.D.L. Sahithi | Ms. Sridevi Raghunathan
+    - Actinomyces Biopropecting Lab, Centre for Research in Infectious Diseases (CRID), SASTRA Deemed University 
     """)
+
+
